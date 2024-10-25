@@ -2,8 +2,8 @@
 
 .page {
   @extend %transition-fast;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   max-width: 1440px;
   margin: auto;
   opacity: 0;

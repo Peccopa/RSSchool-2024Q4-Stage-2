@@ -1,8 +1,9 @@
 'use strict';
 
 import { loader } from './_loader.js';
+import { burger } from './_burger.js';
+import { scroll } from './_scroll.js';
 // import { pageup } from './js/_pageup';
-// import { burger } from './js/_burger';
 // import { layer } from './js/_layer';
 // import { carousel } from './js/_carousel';
 // import { pagination } from './js/_pagination';
@@ -27,10 +28,10 @@ window.addEventListener('load', (event) => {
 const loadPage = function (data) {
   loader.removeLoader();
   burger.menu.addEventListener('click', burger.openBurgerMenu);
+  burger.nav.addEventListener('click', (e) => burger.link(e));
   //   const page = window.location.pathname.split('/').pop();
   //   window.addEventListener('scroll', pageup.showPageUpIco);
   //   layer.layer.addEventListener('click', burger.openBurgerMenu);
-  //   burger.nav.addEventListener('click', (e) => burger.link(e));
   //   document.addEventListener('keyup', (e) => {
   //     if (e.key === 'Escape') {
   //       burger.openBurgerMenu();

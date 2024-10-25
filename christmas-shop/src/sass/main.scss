@@ -5,11 +5,10 @@
 @use './general/normalize';
 
 @use './components/page';
+@use './components/body';
 @use './sections/header';
 @use './components/burger';
 @use './components/loader';
-
-
 
 // .body {
 // font-family: 'Allura';
