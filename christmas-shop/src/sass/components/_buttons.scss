@@ -1,0 +1,18 @@
+@use '../general/variables';
+@use '../general/placeholders';
+// @use '../general/mixins';
+
+.main-btn {
+  @extend %transition-fast;
+  @extend %action-small;
+  padding: 20px 32px;
+  background-color: variables.$color-dark;
+  border-radius: 20px;
+  color: variables.$color-static-white;
+  @media (hover: hover) {
+    &:hover {
+      color: variables.$color-dark;
+      background-color: variables.$color-static-white;
+    }
+  }
+}

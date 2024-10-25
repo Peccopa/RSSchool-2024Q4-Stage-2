@@ -6,9 +6,13 @@
 
 @use './components/page';
 @use './components/body';
-@use './sections/header';
 @use './components/burger';
 @use './components/loader';
+@use './components/pageup';
+@use './components/buttons';
+
+@use './sections/header';
+@use './sections/hero';
 
 // .body {
 // font-family: 'Allura';
