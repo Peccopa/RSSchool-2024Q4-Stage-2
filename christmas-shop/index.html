@@ -13,10 +13,13 @@
       href="./src/img/ico/snowflake.svg"
       type="image/x-icon"
     />
-    <script src="./src/js/main.js" defer></script>
+    <script type="module" src="./src/js/main.js" defer></script>
     <title>Christmas Shop</title>
   </head>
   <body class="body">
+    <div class="loading">
+      <div class="loader"></div>
+    </div>
     <div class="page">
       <header class="header">
         <a class="logo" href="./index.html">
@@ -29,7 +32,9 @@
         </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a class="nav__link" href="./src/pages/gifts.html">gifts</a></li>
+            <li>
+              <a class="nav__link" href="./src/pages/gifts.html">gifts</a>
+            </li>
             <li><a class="nav__link" href="#about">about</a></li>
             <li><a class="nav__link" href="#best">best</a></li>
             <li><a class="nav__link" href="#footer">contacts</a></li>
