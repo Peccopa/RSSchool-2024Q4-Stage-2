@@ -1,0 +1,29 @@
+@use '../general/mixins';
+@use '../general/variables';
+
+.burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  @include mixins.media() {
+    @include mixins.flex();
+    flex-direction: column;
+    gap: 6.5px;
+  }
+  &__line {
+    width: 22px;
+    border: 1px solid variables.$color-dark;
+    border-radius: 1px;
+  }
+  &__opened {
+    position: relative;
+  }
+  &__opened > .burger__line:first-child {
+    position: absolute;
+    rotate: -45deg;
+  }
+  &__opened > .burger__line:last-child {
+    position: absolute;
+    rotate: 45deg;
+  }
+}

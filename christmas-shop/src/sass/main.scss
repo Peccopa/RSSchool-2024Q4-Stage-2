@@ -1,0 +1,19 @@
+@use './general/fonts';
+@use './general/variables';
+@use './general/mixins';
+@use './general/placeholders';
+@use './general/normalize';
+
+@use './components/page';
+@use './sections/header';
+@use './components/burger';
+
+
+
+// .body {
+// font-family: 'Allura';
+// font-family: 'Montserrat';
+// font-weight: 600;
+// background: #000;
+// @extend %caption;
+// }

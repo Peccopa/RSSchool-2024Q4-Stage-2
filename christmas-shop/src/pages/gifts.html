@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Christmas Shop is a RSSchool project where you will need to create a website consisting of two pages, make it responsive, and add interactivity."
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="./src/img/ico/snowflake.svg"
+      type="image/x-icon"
+    />
+    <script src="./src/js/main.js" defer></script>
+    <title>Christmas Shop</title>
+  </head>
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <a class="logo" href="./index.html">
+          <img
+            class="logo__img"
+            src="./src/img/ico/snowflake.svg"
+            alt="Snowflake"
+          />
+          <span class="logo__text">the gifts</span>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="/">gifts</a></li>
+            <li><a class="nav__link" href="#about">about</a></li>
+            <li><a class="nav__link" href="#best">best</a></li>
+            <li><a class="nav__link" href="#footer">contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="hero" id="hero">
+          <div class="hero__content">
+            <span class="hero__caption">Merry Christmas</span>
+            <h1 class="hero__h1">
+              Gift yourself the magic of new possibilities
+            </h1>
+            <a href="/" class="main-btn">Explore Magical Gifts</a>
+            <span class="hero__caption">and Happy New Year</span>
+          </div>
+        </section>
+        <section class="about" id="about">
+          <div class="about__container">
+            <div class="about__content">
+              <span class="about__caption">About</span>
+              <h2 class="about__h2">Unleash your inner superhero!</h2>
+              <p class="about__paragraph">
+                This New Year marks the beginning of your journey to inner
+                harmony and new strengths. We offer unique gifts that will help
+                you improve your life.
+              </p>
+            </div>
+            <img
+              class="about__img"
+              src="./src/img/about/santa.png"
+              alt="Santa and Snowman"
+            />
+          </div>
+        </section>
+        <section class="slider" id="slider">
+          <div class="sider__container">
+            <div class="slider__header">
+              <span class="slider__caption">Become Happier!</span>
+              <h2 class="slider__h2">in the new 2025</h2>
+            </div>
+            <div class="slider__row">
+              <div class="slider__clip">
+                <span class="slider__text">live</span>
+                <img
+                  class="slider__img"
+                  src="./src/img/slider/snowman.png"
+                  alt="Snowman"
+                />
+                <span class="slider__text">create</span>
+                <img
+                  class="slider__img"
+                  src="./src/img/slider/christmas-trees.png"
+                  alt="Christmas trees"
+                />
+                <span class="slider__text">love</span>
+                <img
+                  class="slider__img"
+                  src="./src/img/slider/christmas-tree-ball.png"
+                  alt="Christmas tree ball"
+                />
+                <span class="slider__text">dream</span>
+                <img
+                  class="slider__img"
+                  src="./src/img/slider/fairytale-house.png"
+                  alt="Fairytale house"
+                />
+              </div>
+            </div>
+            <div class="slider__btns">
+              <div class="slider__btn slider__btn_inactive">
+                <span class="btn__arrow arrow_left"></span>
+              </div>
+              <div class="slider__btn">
+                <span class="btn__arrow arrow_right"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="best" id="best">
+          <div class="best__content">
+            <div class="best__header">
+              <span class="best__caption">Best Gifts</span>
+              <h2 class="best__h2">especially for you</h2>
+            </div>
+            <div class="best__cards">
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-work.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For work</h4>
+                  <h3 class="gift-card__h3">Console.log Guru</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-health.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For health</h4>
+                  <h3 class="gift-card__h3">Hydration Bot</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-work.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For work</h4>
+                  <h3 class="gift-card__h3">Merge Master</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-harmony.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For harmony</h4>
+                  <h3 class="gift-card__h3">Spontaneous Coding Philosopher</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="cta" id="cta">
+          <div class="cta__content">
+            <h2 class="cta__h2">
+              Ready to start your journey to a better version of yourself?
+            </h2>
+            <a href="/" class="main-btn">Explore Magical Gifts</a>
+            <div class="timer">
+              <span class="timer__caption">The New Year is Coming Soon...</span>
+              <div class="timer__block">
+                <div class="timer__days">
+                  <h2 class="timer__h2">47</h2>
+                  <h4 class="timer__h4">days</h4>
+                </div>
+                <div class="timer__hours">
+                  <h2 class="timer__h2">5</h2>
+                  <h4 class="timer__h4">hours</h4>
+                </div>
+                <div class="timer__minutes">
+                  <h2 class="timer__h2">34</h2>
+                  <h4 class="timer__h4">minutes</h4>
+                </div>
+                <div class="timer__seconds">
+                  <h2 class="timer__h2">12</h2>
+                  <h4 class="timer__h4">seconds</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="gifts" id="gifts">
+          <div class="gifts__content">
+            <h1 class="gifts__h1">
+              Achieve health, harmony, and inner strength
+            </h1>
+            <div class="tabs">
+              <span class="tab tab_selected" id="tab-all">all</span>
+              <span class="tab" id="tab-work">for work</span>
+              <span class="tab" id="tab-health">for health</span>
+              <span class="tab" id="tab-harmony">for harmony</span>
+            </div>
+            <div class="gifts__cards">
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-work.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For work</h4>
+                  <h3 class="gift-card__h3">Console.log Guru</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-health.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For health</h4>
+                  <h3 class="gift-card__h3">Hydration Bot</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-work.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For work</h4>
+                  <h3 class="gift-card__h3">Merge Master</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-harmony.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For harmony</h4>
+                  <h3 class="gift-card__h3">Spontaneous Coding Philosopher</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-work.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For work</h4>
+                  <h3 class="gift-card__h3">Console.log Guru</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-health.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For health</h4>
+                  <h3 class="gift-card__h3">Hydration Bot</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-work.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For work</h4>
+                  <h3 class="gift-card__h3">Merge Master</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-harmony.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For harmony</h4>
+                  <h3 class="gift-card__h3">Spontaneous Coding Philosopher</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-work.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For work</h4>
+                  <h3 class="gift-card__h3">Console.log Guru</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-health.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For health</h4>
+                  <h3 class="gift-card__h3">Hydration Bot</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-work.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For work</h4>
+                  <h3 class="gift-card__h3">Merge Master</h3>
+                </div>
+              </div>
+              <div class="gift-card">
+                <img
+                  class="gift-card__img"
+                  src="./src/img/gifts/gift-for-harmony.png"
+                  alt="Gift card"
+                />
+                <div class="gift-card__descr">
+                  <h4 class="gift-card__h4">For harmony</h4>
+                  <h3 class="gift-card__h3">Spontaneous Coding Philosopher</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer" id="footer">
+        <div class="footer-cards">
+          <a href="tel:+375291112233" class="footer-card">
+            <img
+              class="footer-card__img"
+              src="./src/img/footer/santa-claus.svg"
+              alt="Santa Claus"
+            />
+            <span class="footer-card__action">+375 (29) 111-22-33</span>
+            <h3 class="footer-card__h3">call us</h3>
+          </a>
+          <a
+            href="https://maps.app.goo.gl/7EQaN8oSv251rUZd9"
+            class="footer-card"
+            target="_blank"
+          >
+            <img
+              class="footer-card__img"
+              src="./src/img/footer/christmas-tree.svg"
+              alt="Christmas Tree"
+            />
+            <span class="footer-card__action">Magic forest</span>
+            <h3 class="footer-card__h3">meet us</h3>
+          </a>
+          <a href="mailto:gifts@magic.com" class="footer-card">
+            <img
+              class="footer-card__img"
+              src="./src/img/footer/snake.svg"
+              alt="Snake"
+            />
+            <span class="footer-card__action">gifts@magic.com</span>
+            <h3 class="footer-card__h3">write us</h3>
+          </a>
+        </div>
+        <div class="footer-links">
+          <div class="footer-socials">
+            <a class="footer-socials__link" href="https://telegram.org/">
+              <img
+                class="telegram-ico"
+                src="./src/img/ico/telegram.svg"
+                alt="Telegram Icon"
+              />
+            </a>
+            <a class="footer-socials__link" href="https://www.facebook.com/">
+              <img
+                class="facebook-ico"
+                src="./src/img/ico/facebook.svg"
+                alt="Facebook Icon"
+              />
+            </a>
+            <a class="footer-socials__link" href="https://www.instagram.com/">
+              <img
+                class="instagram-ico"
+                src="./src/img/ico/instagram.svg"
+                alt="Instagram Icon"
+              />
+            </a>
+            <a class="footer-socials__link" href="https://x.com/">
+              <img
+                class="telegram-ico"
+                src="./src/img/ico/X.svg"
+                alt="X Icon"
+              />
+            </a>
+          </div>
+          <p class="footer-copyright">
+            &copy; Copyright 2025, All Rights Reserved
+          </p>
+          <a href="https://rs.school/" class="footer-rss-link" target="_blank"
+            >Made in Rolling Scopes School</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.header {
+  height: variables.$header-height;
+  @include mixins.flex($justify-content: space-between);
+  padding: 12px 82px;
+  @include mixins.media() {
+    padding: 12px 8px;
+  }
+  .logo {
+    @include mixins.flex($justify-content: space-between);
+    padding: 8px 20px;
+    gap: 8px;
+    &__text {
+      @extend %action-small;
+    }
+  }
+  .nav {
+    @include mixins.media() {
+      position: absolute;
+      top: variables.$header-height;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: variables.$color-static-white;
+    }
+    &__list {
+      @include mixins.flex($justify-content: space-between);
+      gap: 8px;
+      @include mixins.media() {
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100dvh - variables.$header-height);
+      }
+    }
+    &__link {
+      @extend %transition-fast;
+      @extend %action-small;
+      border-radius: 12px;
+      padding: 12px 20px;
+      @include mixins.media() {
+        display: block;
+        @include mixins.font($height: 152%, $spacing: 0.16em);
+      }
+      @media (hover: hover) {
+        &:hover {
+          color: variables.$color-primary;
+          background-color: variables.$color-primary-10;
+        }
+      }
+    }
+  }
+}
