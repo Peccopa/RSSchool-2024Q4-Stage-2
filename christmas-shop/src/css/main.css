@@ -28,6 +28,15 @@
   text-transform: uppercase;
 }
 
+.about__h2 {
+  font-family: "Montserrat", Verdana, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .header .logo__text, .header .nav__link, .main-btn {
   font-family: "Montserrat", Verdana, sans-serif;
   font-size: 1.2rem;
@@ -37,12 +46,21 @@
   text-transform: uppercase;
 }
 
-.hero__caption {
+.about__caption, .hero__caption {
   font-family: "Allura", Verdana, sans-serif;
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+.about__paragraph {
+  font-family: "Montserrat", Verdana, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 148%;
+  letter-spacing: normal;
   text-transform: none;
 }
 
@@ -311,6 +329,75 @@ button {
 }
 .hero__h1 {
   text-align: center;
+}
+
+.about {
+  background-color: #ff4646;
+  background-image: url("../img/bg/bg-snow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 60px 5.695%;
+}
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 8px;
+  }
+}
+.about__container {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+@media (max-width: 640px) {
+  .about__container {
+    flex-direction: column;
+  }
+}
+.about__content {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 60px;
+  padding-right: 11.9132%;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .about__content {
+    padding: 46px 60px;
+  }
+}
+@media (max-width: 640px) {
+  .about__content {
+    width: 100%;
+  }
+}
+@media (max-width: 380px) {
+  .about__content {
+    padding: 60px 20px;
+  }
+}
+.about__caption {
+  color: #ff4646;
+}
+.about__img {
+  background-image: url("../img/about/santa.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  height: 528px;
+  width: 50%;
+}
+@media (max-width: 640px) {
+  .about__img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
