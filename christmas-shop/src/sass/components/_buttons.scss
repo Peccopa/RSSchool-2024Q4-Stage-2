@@ -5,6 +5,7 @@
 .main-btn {
   @extend %transition-fast;
   @extend %action-small;
+  height: 56px;
   padding: 20px 32px;
   background-color: variables.$color-dark;
   border-radius: 20px;
