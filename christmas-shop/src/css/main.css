@@ -19,6 +19,13 @@
   font-style: normal;
   font-display: swap;
 }
+.best, .slider, .about, .hero {
+  background-color: #ff4646;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .hero__h1 {
   font-family: "Montserrat", Verdana, sans-serif;
   font-size: 3.2rem;
@@ -28,7 +35,7 @@
   text-transform: uppercase;
 }
 
-.slider__h2, .about__h2 {
+.best__h2, .slider__h2, .about__h2 {
   font-family: "Montserrat", Verdana, sans-serif;
   font-size: 2.4rem;
   font-weight: 600;
@@ -73,7 +80,7 @@
   text-transform: uppercase;
 }
 
-.slider__caption, .about__caption, .hero__caption {
+.best__caption, .slider__caption, .about__caption, .hero__caption {
   font-family: "Allura", Verdana, sans-serif;
   font-size: 2.4rem;
   font-weight: 400;
@@ -397,11 +404,7 @@ button {
 }
 
 .hero {
-  background-color: #ff4646;
   background-image: url("../img/bg/bg-ball.png"), url("../img/bg/bg-snow.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   border-radius: 20px 20px 0 0;
   padding: 60px 0;
 }
@@ -421,11 +424,7 @@ button {
 }
 
 .about {
-  background-color: #ff4646;
   background-image: url("../img/bg/bg-snow.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   padding: 60px 5.695%;
 }
 @media (max-width: 768px) {
@@ -490,11 +489,7 @@ button {
 }
 
 .slider {
-  background-color: #ff4646;
   background-image: url("../img/bg/bg-snow.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   padding: 60px 0;
 }
 .slider__container {
@@ -554,6 +549,38 @@ button {
   .slider__btns {
     padding: 0 8px;
   }
+}
+
+.best {
+  background-image: url("../img/bg/bg-snow.png");
+  padding: 60px 8px;
+}
+.best__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.best__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.best__caption {
+  color: #ffffff;
+}
+.best__h2 {
+  color: #ffffff;
+}
+.best__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */

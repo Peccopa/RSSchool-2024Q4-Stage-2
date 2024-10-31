@@ -1,16 +1,32 @@
-// @use '../general/variables';
-// @use '../general/placeholders';
-// @use '../general/mixins';
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
 
 .best {
+  background-image: url('../img/bg/bg-snow.png');
+  @extend %section-bg;
+  padding: 60px 8px;
   &__content {
+    @include mixins.flex();
+    flex-direction: column;
+    gap: 20px;
   }
   &__header {
+    @include mixins.flex();
+    flex-direction: column;
+    gap: 12px;
   }
   &__caption {
+    @extend %caption;
+    color: variables.$color-static-white;
   }
   &__h2 {
+    @extend %header-2;
+    color: variables.$color-static-white;
   }
   &__cards {
+    @include mixins.flex();
+    flex-wrap: wrap;
+    gap: 12px;
   }
 }
