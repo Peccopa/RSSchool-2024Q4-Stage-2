@@ -3,6 +3,7 @@
 import { loader } from './_loader.js';
 import { burger } from './_burger.js';
 import { slider } from './_slider.js';
+import { timer } from './_timer.js';
 import { scroll } from './_scroll.js';
 // import { pageup } from './js/_pageup';
 // import { layer } from './js/_layer';
@@ -32,6 +33,7 @@ const loadPage = function (data) {
   burger.nav.addEventListener('click', (e) => burger.link(e));
   slider.sliderBtns.addEventListener('click', slider.sliderClick);
   window.addEventListener('resize', slider.sliderResize);
+  timer.startTimer();
   // slider.sliderBtns.addEventListener('click', (e) => slider.sliderClick(e));
   //   const page = window.location.pathname.split('/').pop();
   //   window.addEventListener('scroll', pageup.showPageUpIco);

@@ -20,6 +20,7 @@
     // gap: 1px;
   }
   &__h2 {
+    width: 100%;
     @extend %header-2;
     text-align: center;
   }

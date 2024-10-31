@@ -368,6 +368,7 @@ button {
   padding: 8px 12px 12px;
 }
 .timer__h2 {
+  width: 100%;
   text-align: center;
 }
 .timer__h4 {
