@@ -37,6 +37,24 @@
   text-transform: uppercase;
 }
 
+.gift-card__h3 {
+  font-family: "Montserrat", Verdana, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gift-card__h4 {
+  font-family: "Montserrat", Verdana, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .slider__text {
   font-family: "Montserrat", Verdana, sans-serif;
   font-size: 8rem;
@@ -278,6 +296,36 @@ button {
 
 .arrow_left {
   rotate: 180deg;
+}
+
+.gift-card {
+  width: 310px;
+  min-height: 342px;
+  background-color: #ecf3f8;
+  border-radius: 20px;
+}
+.gift-card__img {
+  height: 230px;
+}
+.gift-card__descr {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 112px;
+}
+.gift-card__h4 {
+  margin-bottom: 8px;
+}
+.purple {
+  color: #4361ff;
+}
+
+.pink {
+  color: #ff43f7;
+}
+
+.green {
+  color: #06a44f;
 }
 
 .header {

@@ -8,10 +8,15 @@
 @use './components/body';
 @use './components/burger';
 @use './components/loader';
-@use './components/pageup';
+@use './components/page-up';
 @use './components/buttons';
+@use './components/gift-card';
+@use './components/colors';
 
 @use './sections/header';
 @use './sections/hero';
 @use './sections/about';
 @use './sections/slider';
+@use './sections/best';
+
+
