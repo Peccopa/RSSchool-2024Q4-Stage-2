@@ -13,6 +13,7 @@
 @use './components/gift-card';
 @use './components/colors';
 @use './components/timer';
+@use './components/contact-card';
 
 @use './sections/header';
 @use './sections/hero';
@@ -20,5 +21,6 @@
 @use './sections/slider';
 @use './sections/best';
 @use './sections/cta';
+@use './sections/footer';
 
 

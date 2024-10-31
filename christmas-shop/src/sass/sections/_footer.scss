@@ -1,0 +1,46 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.footer {
+  @include mixins.flex();
+  flex-direction: column;
+  padding: 60px 8px;
+  gap: 60px;
+  // background-image: url('../img/bg/bg-snow.png'), url('../img/bg/bg-forest.png');
+  // border-radius: 0 0 20px 20px;
+  // @extend %section-bg;
+  // min-height: 668px;
+  // @include mixins.media() {
+  //   padding: 60px 8px;
+  // }
+  .contact-cards {
+    @include mixins.flex();
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .contact-links {
+    @include mixins.flex();
+    flex-direction: column;
+    gap: 12px;
+  }
+  .social-links {
+    @include mixins.flex();
+    gap: 12px;
+    &__link {
+      @extend %transition-fast;
+      padding: 8px;
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .copyright {
+    @extend %paragraph;
+  }
+  .rss-link {
+    @extend %caption;
+  }
+}
