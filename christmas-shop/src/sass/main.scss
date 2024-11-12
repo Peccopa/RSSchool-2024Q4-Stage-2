@@ -6,6 +6,8 @@
 
 @use './components/page';
 @use './components/body';
+@use './components/logo';
+@use './components/nav';
 @use './components/burger';
 @use './components/loader';
 @use './components/page-up';
@@ -14,6 +16,7 @@
 @use './components/colors';
 @use './components/timer';
 @use './components/contact-card';
+@use './components/tabs';
 
 @use './sections/header';
 @use './sections/hero';
@@ -22,5 +25,6 @@
 @use './sections/best';
 @use './sections/cta';
 @use './sections/footer';
+@use './sections/gifts';
 
 

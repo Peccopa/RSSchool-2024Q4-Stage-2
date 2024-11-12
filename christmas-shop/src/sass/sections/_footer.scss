@@ -42,5 +42,11 @@
   }
   .rss-link {
     @extend %caption;
+    @extend %transition-fast;
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 }
