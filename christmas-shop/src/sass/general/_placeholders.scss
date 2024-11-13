@@ -13,7 +13,8 @@
 }
 
 %header-2 {
-  @include mixins.font($height: 152%, $spacing: 0.16em);
+  // @include mixins.font($height: 152%, $spacing: 0.16em);
+  @include mixins.font($height: 150%, $spacing: 0.16em); // pixel
 }
 
 %header-3 {

@@ -18,9 +18,16 @@
     // display: block;
     // @include mixins.font($height: 152%, $spacing: 0.16em);
     // }
+    @media (hover: hover) {
+      &:hover {
+        background-color: variables.$color-static-white-20;
+      }
+    }
   }
   .tab_selected {
     background-color: variables.$color-static-white-20;
+    pointer-events: none;
+    // cursor: auto;
   }
 }
 

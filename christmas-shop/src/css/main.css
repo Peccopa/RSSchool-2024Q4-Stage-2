@@ -39,7 +39,7 @@
   font-family: "Montserrat", Verdana, sans-serif;
   font-size: 2.4rem;
   font-weight: 600;
-  line-height: 152%;
+  line-height: 150%;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -107,7 +107,7 @@
   text-transform: none;
 }
 
-.footer .social-links__link, .footer .rss-link, .slider__clip, .tabs .tab, .contact-card, .main-btn, .slider-button, .button-arrow path, .pageup, .loading, .burger__line, .nav, .nav__link, .page {
+.footer .social-links__link, .footer .rss-link, .slider__clip, .tabs .tab, .contact-card, .gift-card, .main-btn, .slider-button, .button-arrow path, .pageup, .loading, .burger__line, .nav, .nav__link, .page {
   transition: all 0.3s ease-in-out;
 }
 
@@ -212,6 +212,11 @@ button {
     color: #ff4646;
     background-color: rgba(255, 70, 70, 0.1019607843);
   }
+}
+.nav__link_active {
+  color: #ff4646;
+  background-color: rgba(255, 70, 70, 0.1019607843);
+  pointer-events: none;
 }
 
 .burger {
@@ -413,6 +418,11 @@ button {
   border-radius: 20px;
   cursor: pointer;
 }
+@media (hover: hover) {
+  .gift-card:hover {
+    color: #ff4646;
+  }
+}
 .gift-card__img {
   height: 230px;
 }
@@ -518,8 +528,14 @@ button {
   max-height: 40px;
   cursor: pointer;
 }
+@media (hover: hover) {
+  .tabs .tab:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
 .tabs .tab_selected {
   background-color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
 }
 
 .header {
@@ -654,7 +670,7 @@ button {
   margin: 0 5.695%;
   width: 1993px;
   height: 200px;
-  gap: 20px;
+  gap: 20.34px;
   left: 0px;
   top: 0;
 }

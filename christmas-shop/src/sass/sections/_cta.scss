@@ -25,6 +25,7 @@
   &__h2 {
     max-width: 426px;
     // max-height: 108px;
+    // line-height: 150%;
     text-align: center;
     @extend %header-2;
     color: variables.$color-static-white;

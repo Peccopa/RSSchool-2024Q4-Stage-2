@@ -41,5 +41,10 @@
         background-color: variables.$color-primary-10;
       }
     }
+    &_active {
+      color: variables.$color-primary;
+      background-color: variables.$color-primary-10;
+      pointer-events: none;
+    }
   }
 }

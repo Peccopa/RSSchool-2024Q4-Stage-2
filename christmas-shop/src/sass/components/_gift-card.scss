@@ -3,11 +3,17 @@
 // @use '../general/mixins';
 
 .gift-card {
+  @extend %transition-fast;
   width: 310px;
   min-height: 342px;
   background-color: variables.$color-content-background;
   border-radius: 20px;
   cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      color: variables.$color-primary;
+    }
+  }
   &__img {
     height: 230px;
   }
