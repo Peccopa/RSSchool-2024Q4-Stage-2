@@ -1,15 +1,15 @@
 'use strict';
 
-import { loader } from './_loader.js';
-import { burger } from './_burger.js';
-import { slider } from './_slider.js';
-import { timer } from './_timer.js';
-import { pageup } from './_pageup.js';
-import { scroll } from './_scroll.js';
-// import { cards} from './_cards.js';
-// import { layer } from './js/_layer';
-// import { carousel } from './js/_carousel';
-// import { pagination } from './js/_pagination';
+import { loader } from './loader.js';
+import { burger } from './burger.js';
+import { slider } from './slider.js';
+import { timer } from './timer.js';
+import { pageup } from './pageup.js';
+import { scroll } from './scroll.js';
+// import { cards} from './cards.js';
+// import { layer } from './js/layer';
+// import { carousel } from './js/carousel';
+// import { pagination } from './js/pagination';
 
 window.addEventListener('load', (event) => {
   const url =
