@@ -1,0 +1,64 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.slider {
+  background-image: url('../img/bg/bg-snow.png');
+  @extend %section-bg;
+  padding: 60px 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__header {
+    @include mixins.flex();
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__caption {
+    @extend %caption;
+    color: variables.$color-static-white;
+  }
+  &__h2 {
+    @extend %header-2;
+    color: variables.$color-static-white;
+  }
+  &__row {
+    position: relative;
+    height: 200px;
+  }
+  &__clip {
+    @extend %transition-fast;
+    @include mixins.flex($justify-content: start);
+    position: absolute;
+    margin: 0 5.695%;
+    // margin: 0 5.84%;
+    width: 1993px;
+    height: 200px;
+    // gap: 20px;
+    gap: 20.34px; // pixel
+    left: 0px;
+    // left: -717px;
+    top: 0;
+    @include mixins.media() {
+      margin: 0 8px;
+    }
+  }
+  &__text {
+    @extend %slider-text;
+    color: variables.$color-static-white;
+  }
+  &__img {
+    width: 200px;
+    border-radius: 20px;
+  }
+  &__btns {
+    @include mixins.flex($justify-content: end);
+    padding: 0 5.695%;
+    gap: 20px;
+    @include mixins.media() {
+      padding: 0 8px;
+    }
+  }
+}

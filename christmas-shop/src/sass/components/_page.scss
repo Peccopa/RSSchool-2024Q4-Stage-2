@@ -1,0 +1,10 @@
+@use '../general/placeholders';
+
+.page {
+  @extend %transition-fast;
+  position: relative;
+  overflow: hidden;
+  max-width: 1440px;
+  margin: auto;
+  opacity: 0;
+}

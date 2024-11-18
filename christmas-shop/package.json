@@ -1,0 +1,23 @@
+{
+  "name": "christmas-shop",
+  "version": "1.0.0",
+  "description": "Christmas Shop is a RSSchool project where you will need to create a website consisting of two pages, make it responsive, and add interactivity.",
+  "main": "main.js",
+  "scripts": {
+    "style": "sass --watch src/sass/main.scss src/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4.git"
+  },
+  "author": "Peccopa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4#readme",
+  "dependencies": {
+    "sass": "^1.80.4"
+  }
+}

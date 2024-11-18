@@ -1,0 +1,13 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.logo {
+  @include mixins.flex($justify-content: space-between);
+  padding: 8px 20px;
+  z-index: 1;
+  gap: 8px;
+  &__text {
+    @extend %action-small;
+  }
+}

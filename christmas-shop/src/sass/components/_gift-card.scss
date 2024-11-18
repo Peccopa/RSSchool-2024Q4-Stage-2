@@ -1,0 +1,33 @@
+@use '../general/variables';
+@use '../general/placeholders';
+// @use '../general/mixins';
+
+.gift-card {
+  @extend %transition-fast;
+  width: 310px;
+  min-height: 342px;
+  background-color: variables.$color-content-background;
+  border-radius: 20px;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      color: variables.$color-primary;
+    }
+  }
+  &__img {
+    height: 230px;
+  }
+  &__descr {
+    background-color: variables.$color-static-white;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 112px;
+  }
+  &__h4 {
+    @extend %header-4;
+    margin-bottom: 8px;
+  }
+  &__h3 {
+    @extend %header-3;
+  }
+}

@@ -1,0 +1,54 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.main-btn {
+  @extend %transition-fast;
+  @extend %action-small;
+  height: 56px;
+  padding: 20px 32px;
+  background-color: variables.$color-dark;
+  border-radius: 20px;
+  color: variables.$color-static-white;
+  @media (hover: hover) {
+    &:hover {
+      color: variables.$color-dark;
+      background-color: variables.$color-static-white;
+    }
+  }
+}
+
+.slider-button {
+  @extend %transition-fast;
+  @include mixins.flex();
+  border: 1px solid variables.$color-static-white;
+  border-radius: 20px;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      background-color: variables.$color-static-white;
+    }
+    &:hover .button-arrow path {
+      stroke: variables.$color-primary;
+    }
+  }
+}
+
+.slider-button_inactive {
+  border: 1px solid variables.$color-static-white-40;
+  pointer-events: none;
+  cursor: auto;
+  .button-arrow path {
+    stroke: variables.$color-static-white-40;
+  }
+}
+
+.button-arrow path {
+  @extend %transition-fast;
+}
+
+.arrow_left {
+  rotate: 180deg;
+}

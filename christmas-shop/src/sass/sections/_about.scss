@@ -1,0 +1,72 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.about {
+  background-image: url('../img/bg/bg-snow.png');
+  @extend %section-bg;
+  padding: 60px 5.695%;
+  @include mixins.media() {
+    padding: 60px 8px;
+  }
+  &__container {
+    background-color: variables.$color-static-white;
+    @include mixins.flex();
+    border-radius: 20px;
+    @include mixins.media(variables.$bigmob-width) {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    width: 50%;
+    @include mixins.flex();
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 60px;
+    padding-right: calc(11.9132%);
+    gap: 20px;
+    @include mixins.media() {
+      padding: 46px 60px;
+    }
+    @include mixins.media(variables.$bigmob-width) {
+      width: 100%;
+    }
+    @include mixins.media(variables.$mobile-width) {
+      padding: 60px 20px;
+    }
+  }
+  &__caption {
+    @extend %caption;
+    color: variables.$color-primary;
+  }
+  &__h2 {
+    @extend %header-2;
+  }
+  &__paragraph {
+    @extend %paragraph;
+    // width: 50%;
+    // width: 638px;
+    // flex-basis: 50%;
+  }
+  &__img {
+    // margin-top: 4px;
+
+    background-image: url('../img/about/santa.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    height: 528px;
+    width: 50%;
+    @include mixins.media(variables.$bigmob-width) {
+      // background-size: cover;
+      width: 100%;
+    }
+    // position: absolute;
+    // top: 0;
+    // flex-basis: 50%;
+    // flex-basis: 50%;
+    // flex-shrink: 2;
+    // object-fit:scale-down
+  }
+}

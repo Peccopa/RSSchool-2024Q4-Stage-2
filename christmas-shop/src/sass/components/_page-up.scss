@@ -1,0 +1,83 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.pageup {
+  background-color: variables.$color-static-white;
+  @extend %transition-fast;
+  @include mixins.flex();
+  display: none;
+  position: fixed;
+  z-index: 2;
+  bottom: 8px;
+  right: 8px;
+  border: 1px solid variables.$color-primary;
+  border-radius: 100%;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  @include mixins.media() {
+    display: flex;
+  }
+  .button-arrow path {
+    stroke: variables.$color-primary;
+  }
+  @media (hover: hover) {
+    &:hover {
+      border-color: variables.$color-primary-40;
+    }
+    &:hover .button-arrow path {
+      stroke: variables.$color-primary-40;
+    }
+  }
+}
+
+// .slider-button_inactive {
+//   border: 1px solid variables.$color-static-white-40;
+//   pointer-events: none;
+//   cursor: auto;
+//   .button-arrow path {
+//     stroke: variables.$color-static-white-40;
+//   }
+// }
+
+// .button-arrow path {
+//   @extend %transition-fast;
+// }
+
+.arrow_up {
+  rotate: -90deg;
+}
+
+// .pageup {
+// z-index: 2;
+// transition: all 0.3s ease-in-out;
+// display: none;
+// width: 52px;
+// height: 52px;
+// position: fixed;
+// bottom: 40px;
+// right: 40px;
+// @include media-medium {
+//   bottom: 30px;
+//   right: 30px;
+// }
+// @include media-bigmob {
+//   bottom: 15px;
+//   right: 15px;
+// }
+// }
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// .visible {
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+// .inactive {
+//   pointer-events: none;
+// }
