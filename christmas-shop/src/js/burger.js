@@ -1,4 +1,4 @@
-import { scroll } from './_scroll.js';
+import { scroll } from './scroll.js';
 
 export const burger = {
   menu: document.querySelector('.burger'),
