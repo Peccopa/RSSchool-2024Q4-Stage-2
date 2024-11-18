@@ -12,10 +12,9 @@ import { scroll } from './scroll.js';
 // import { pagination } from './js/pagination';
 
 window.addEventListener('load', (event) => {
-  const url =
-    window.location.pathname === '/christmas-shop/src/pages/gifts.html'
-      ? '../data/gifts.json'
-      : './src/data/gifts.json';
+  const url = window.location.pathname.includes('gifts')
+    ? '../data/gifts.json'
+    : './src/data/gifts.json';
 
   const getData = async (url) => {
     const response = await fetch(url);
