@@ -521,12 +521,22 @@ button {
   justify-content: space-between;
   gap: 8px;
 }
+@media (max-width: 640px) {
+  .tabs {
+    gap: 0px;
+  }
+}
 .tabs .tab {
   color: #ffffff;
   border-radius: 12px;
   padding: 12px 20px;
   max-height: 40px;
   cursor: pointer;
+}
+@media (max-width: 640px) {
+  .tabs .tab {
+    padding: 12px 8px;
+  }
 }
 @media (hover: hover) {
   .tabs .tab:hover {
@@ -812,6 +822,11 @@ button {
   background-size: contain;
   border-radius: 20px;
   padding: 60px 5.695%;
+}
+@media (max-width: 640px) {
+  .gifts {
+    padding: 60px 8px;
+  }
 }
 .gifts__content {
   display: flex;
