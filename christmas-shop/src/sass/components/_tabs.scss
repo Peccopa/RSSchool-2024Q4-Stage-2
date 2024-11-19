@@ -5,6 +5,9 @@
 .tabs {
   @include mixins.flex($justify-content: space-between);
   gap: 8px;
+  @include mixins.media($screen-width: variables.$bigmob-width) {
+    gap: 0px;
+  }
   .tab {
     // display: block;
     @extend %transition-fast;
@@ -14,6 +17,9 @@
     padding: 12px 20px;
     max-height: 40px;
     cursor: pointer;
+    @include mixins.media($screen-width: variables.$bigmob-width) {
+      padding: 12px 8px;
+    }
     // @include mixins.media() {
     // display: block;
     // @include mixins.font($height: 152%, $spacing: 0.16em);

@@ -18,6 +18,9 @@
   // @include mixins.media($screen-width: variables.$bigmob-width) {
     // min-height: 704px;
   // }
+  @include mixins.media($screen-width: variables.$bigmob-width) {
+    padding: 60px 8px;
+  }
   &__content {
     @include mixins.flex();
     flex-direction: column;
