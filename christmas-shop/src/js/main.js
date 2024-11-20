@@ -1,6 +1,7 @@
 'use strict';
 
 import { loader } from './loader.js';
+import { links } from './links.js';
 import { burger } from './burger.js';
 import { slider } from './slider.js';
 import { timer } from './timer.js';
@@ -10,6 +11,8 @@ import { scroll } from './scroll.js';
 // import { layer } from './js/layer';
 // import { carousel } from './js/carousel';
 // import { pagination } from './js/pagination';
+
+// console.log(window.location);
 
 window.addEventListener('load', (event) => {
   const url = window.location.pathname.includes('gifts')
@@ -29,8 +32,9 @@ window.addEventListener('load', (event) => {
 
 const loadPage = function (data) {
   loader.removeLoader();
+  window.addEventListener('click', links.checkClick);
   burger.menu.addEventListener('click', burger.openBurgerMenu);
-  burger.nav.addEventListener('click', (e) => burger.link(e));
+  // burger.nav.addEventListener('click', (e) => burger.link(e));
   if (window.location.pathname === '/christmas-shop/src/pages/gifts.html') {
     // window.addEventListener('scroll', pageup.showPageUpIco);
   } else {

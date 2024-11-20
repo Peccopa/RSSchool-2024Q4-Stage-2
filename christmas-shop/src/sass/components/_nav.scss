@@ -31,6 +31,7 @@
     @extend %action-small;
     border-radius: 12px;
     padding: 12px 20px;
+    cursor: pointer;
     @include mixins.media() {
       display: block;
       @include mixins.font($height: 152%, $spacing: 0.16em);
@@ -45,6 +46,10 @@
       color: variables.$color-primary;
       background-color: variables.$color-primary-10;
       pointer-events: none;
+      @include mixins.media() {
+        pointer-events: all;
+        cursor: default;
+      }
     }
   }
 }

@@ -10,6 +10,7 @@
   background-color: variables.$color-dark;
   border-radius: 20px;
   color: variables.$color-static-white;
+  cursor: pointer;
   @media (hover: hover) {
     &:hover {
       color: variables.$color-dark;

@@ -18,8 +18,14 @@ export const burger = {
     }
   },
   link(e) {
-    const target = e.target.classList;
-    if (target.contains('nav__link')) burger.openBurgerMenu();
+    // const target = e.target.classList;
+    // if (target.contains('gifts-link')) {
+    //   document.querySelector('.page').classList.remove('opacity-1');
+    //   setTimeout(function () {
+    //     window.location.href = './src/pages/gifts.html';
+    //   }, 300);
+    // }
+    // if (target.contains('nav__link')) burger.openBurgerMenu();
   },
   // if (target.contains('nav_selected')) burger.openBurgerMenu();
   // if (target.contains('nav__link') && !target.contains('nav_selected')) {

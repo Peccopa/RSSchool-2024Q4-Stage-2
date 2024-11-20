@@ -107,7 +107,7 @@
   text-transform: none;
 }
 
-.footer .social-ico path, .footer .social-links__link, .footer .rss-link, .slider__clip, .tabs .tab, .contact-card, .gift-card, .main-btn, .slider-button, .button-arrow path, .pageup, .loading, .burger__line, .nav, .nav__link, .page {
+.footer .social-ico path, .footer .social-links__link, .footer .rss-link, .slider__clip, .tabs .tab, .contact-card, .gift-card, .main-btn, .slider-button, .button-arrow path, .pageup, .loading, .burger__line, .nav, .nav__link {
   transition: all 0.3s ease-in-out;
 }
 
@@ -147,6 +147,7 @@ button {
 }
 
 .page {
+  transition: all 0.15s ease-in-out;
   position: relative;
   overflow: hidden;
   max-width: 1440px;
@@ -165,6 +166,7 @@ button {
   padding: 8px 20px;
   z-index: 1;
   gap: 8px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .nav {
@@ -195,6 +197,7 @@ button {
 .nav__link {
   border-radius: 12px;
   padding: 12px 20px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .nav__link {
@@ -217,6 +220,12 @@ button {
   color: #ff4646;
   background-color: rgba(255, 70, 70, 0.1019607843);
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  .nav__link_active {
+    pointer-events: all;
+    cursor: default;
+  }
 }
 
 .burger {
@@ -371,6 +380,7 @@ button {
   background-color: #181c29;
   border-radius: 20px;
   color: #ffffff;
+  cursor: pointer;
 }
 @media (hover: hover) {
   .main-btn:hover {
