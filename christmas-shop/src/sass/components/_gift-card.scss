@@ -4,11 +4,24 @@
 
 .gift-card {
   @extend %transition-fast;
+  display: block;
+  // order: 1;
   width: 310px;
   min-height: 342px;
   background-color: variables.$color-content-background;
   border-radius: 20px;
   cursor: pointer;
+  // bottom: auto;
+  // margin: 0 6px;
+
+  &_anim {
+    transform: rotate3d(0, 1, 0, 90deg);
+    // box-shadow: 10px 5px 5px rgb(0, 0, 0);
+
+  }
+  &_none {
+    display: none;
+  }
   @media (hover: hover) {
     &:hover {
       color: variables.$color-primary;

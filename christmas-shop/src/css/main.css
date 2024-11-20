@@ -422,11 +422,18 @@ button {
 }
 
 .gift-card {
+  display: block;
   width: 310px;
   min-height: 342px;
   background-color: #ecf3f8;
   border-radius: 20px;
   cursor: pointer;
+}
+.gift-card_anim {
+  transform: rotate3d(0, 1, 0, 90deg);
+}
+.gift-card_none {
+  display: none;
 }
 @media (hover: hover) {
   .gift-card:hover {
@@ -556,6 +563,7 @@ button {
 .tabs .tab_selected {
   background-color: rgba(255, 255, 255, 0.2);
   pointer-events: none;
+  cursor: auto;
 }
 
 .header {
@@ -690,7 +698,7 @@ button {
   margin: 0 5.695%;
   width: 1993px;
   height: 200px;
-  gap: 20.34px;
+  gap: 20px;
   left: 0px;
   top: 0;
 }

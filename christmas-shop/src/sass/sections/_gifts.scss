@@ -3,6 +3,7 @@
 @use '../general/mixins';
 
 .gifts {
+  // position: relative;
   background-image: url('../img/bg/bg-garland.png');
   background-color: variables.$color-primary;
   background-repeat: no-repeat;
