@@ -3,10 +3,14 @@
 @use '../general/mixins';
 
 .slider {
+  @extend %transition-fast;
+
   background-image: url('../img/bg/bg-snow.png');
   @extend %section-bg;
   padding: 60px 0;
   &__container {
+    @extend %transition-fast;
+
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -29,7 +33,8 @@
     height: 200px;
   }
   &__clip {
-    @extend %transition-fast;
+    @extend %transition-slow;
+    // transition: all 2s ease-in-out;
     @include mixins.flex($justify-content: start);
     position: absolute;
     margin: 0 5.695%;

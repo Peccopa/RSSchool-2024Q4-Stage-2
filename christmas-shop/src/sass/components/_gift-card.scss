@@ -3,7 +3,7 @@
 // @use '../general/mixins';
 
 .gift-card {
-  @extend %transition-fast;
+  @extend %transition-slow;
   display: block;
   // order: 1;
   width: 310px;
@@ -15,11 +15,15 @@
   // margin: 0 6px;
 
   &_anim {
+    // order: 1;
     transform: rotate3d(0, 1, 0, 90deg);
     // box-shadow: 10px 5px 5px rgb(0, 0, 0);
-
   }
   &_none {
+    // order: 2;
+    // min-height: 10px;
+    // width: 10px;
+    // height: 109px;
     display: none;
   }
   @media (hover: hover) {

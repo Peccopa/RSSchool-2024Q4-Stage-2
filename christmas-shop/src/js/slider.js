@@ -5,7 +5,8 @@ export const slider = {
   sliderBtnLeft: document.querySelector('.slider-button.left'),
   sliderBtnRght: document.querySelector('.slider-button.right'),
   sliderAnimationEnd() {
-    slider.sliderBtns.addEventListener('click', slider.sliderClick);
+    // slider.sliderBtns.addEventListener('click', slider.sliderClick);
+    slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
   },
   sliderResize() {
     slider.sliderClip.style.left = `0px`;
@@ -27,7 +28,7 @@ export const slider = {
           slider.sliderClip.style.left = `${clipPosition - clipStep}px`;
           slider.sliderBtnLeft.classList.remove('slider-button_inactive');
           slider.sliderBtns.removeEventListener('click', slider.sliderClick);
-          slider.sliderSec.addEventListener(
+          slider.sliderClip.addEventListener(
             'transitionend',
             slider.sliderAnimationEnd
           );
@@ -41,7 +42,7 @@ export const slider = {
           slider.sliderClip.style.left = `${clipPosition + clipStep}px`;
           slider.sliderBtnRght.classList.remove('slider-button_inactive');
           slider.sliderBtns.removeEventListener('click', slider.sliderClick);
-          slider.sliderSec.addEventListener(
+          slider.sliderClip.addEventListener(
             'transitionend',
             slider.sliderAnimationEnd
           );
@@ -54,41 +55,52 @@ export const slider = {
   },
   sliderClickTrash(e) {
     if (!e.target.classList.contains('slider__btns')) {
+      const clipPosition = parseFloat(getComputedStyle(slider.sliderClip).left);
       const secWidth = parseFloat(getComputedStyle(slider.sliderSec).width);
       const sliderClipStyles = getComputedStyle(slider.sliderClip);
       const sliderClipWidth =
         parseFloat(sliderClipStyles.marginLeft) * 2 +
         parseFloat(sliderClipStyles.width);
-      // const clickCount = Math.floor(sliderClipWidth / secWidth);
       const clickCount = secWidth > 768 ? 3 : 6;
       const clipStep = Math.trunc((sliderClipWidth - secWidth) / clickCount);
-      const clipPosition = parseFloat(getComputedStyle(slider.sliderClip).left);
+
       if (e.target.classList.contains('right')) {
-        if (clipPosition !== -clipStep * clickCount) {
-          slider.sliderClip.style.left = `${clipPosition - clipStep}px`;
-          slider.sliderBtnLeft.classList.remove('slider-button_inactive');
-          slider.sliderBtns.removeEventListener('click', slider.sliderClick);
-          slider.sliderSec.addEventListener(
-            'transitionend',
-            slider.sliderAnimationEnd
-          );
-        }
+
         if (clipPosition - clipStep === -clipStep * clickCount) {
           slider.sliderBtnRght.classList.add('slider-button_inactive');
         }
-      }
-      if (e.target.classList.contains('left')) {
-        if (clipPosition !== 0) {
-          slider.sliderClip.style.left = `${clipPosition + clipStep}px`;
-          slider.sliderBtnRght.classList.remove('slider-button_inactive');
-          slider.sliderBtns.removeEventListener('click', slider.sliderClick);
-          slider.sliderSec.addEventListener(
+
+        if (clipPosition !== -clipStep * clickCount) {
+          slider.sliderClip.style.left = `${clipPosition - clipStep}px`;
+          slider.sliderBtnLeft.classList.remove('slider-button_inactive');
+          slider.sliderBtns.removeEventListener(
+            'click',
+            slider.sliderClickTrash
+          );
+          slider.sliderClip.addEventListener(
             'transitionend',
             slider.sliderAnimationEnd
           );
         }
-        if (slider.sliderClip.style.left === '0px') {
+      }
+      if (e.target.classList.contains('left')) {
+        // if (slider.sliderClip.style.left === '0px') {
+        // if (parseFloat(slider.sliderClip.style.left) === 0) {
+        if (-parseFloat(slider.sliderClip.style.left) === clipStep) {
           slider.sliderBtnLeft.classList.add('slider-button_inactive');
+        }
+        // if (clipPosition !== 0) {
+        if (clipPosition !== 0) {
+          slider.sliderClip.style.left = `${clipPosition + clipStep}px`;
+          slider.sliderBtnRght.classList.remove('slider-button_inactive');
+          slider.sliderBtns.removeEventListener(
+            'click',
+            slider.sliderClickTrash
+          );
+          slider.sliderClip.addEventListener(
+            'transitionend',
+            slider.sliderAnimationEnd
+          );
         }
       }
     }

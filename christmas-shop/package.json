@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4/issues"
   },
-  "homepage": "https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4#readme",
-  "dependencies": {
-    "sass": "^1.80.4"
-  }
+  "homepage": "https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4#readme"
 }

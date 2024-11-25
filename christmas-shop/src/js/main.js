@@ -1,5 +1,6 @@
 'use strict';
 
+import { data } from './data.js';
 import { loader } from './loader.js';
 import { links } from './links.js';
 import { burger } from './burger.js';
@@ -18,13 +19,7 @@ window.addEventListener('load', (event) => {
     ? '../data/gifts.json'
     : './src/data/gifts.json';
 
-  const getData = async (url) => {
-    const response = await fetch(url);
-    const json = await response.json();
-    return json;
-  };
-
-  getData(url).then((data) => {
+  data.getData(url).then((data) => {
     loadPage(data);
   });
 });
@@ -35,17 +30,34 @@ const loadPage = function (data) {
   burger.menu.addEventListener('click', burger.openBurgerMenu);
   // burger.nav.addEventListener('click', (e) => burger.link(e));
   if (window.location.pathname === '/christmas-shop/src/pages/gifts.html') {
+    if (data) {
+      tabs.data = data;
+      tabs.generateGiftsCardsBlock(data);
+    }
     window.addEventListener('scroll', pageup.showPageUpIco);
     tabs.tabs.addEventListener('click', tabs.clickOnTabs);
   } else {
+    if (data) {
+      const parent = document.querySelector('.best__cards');
+      parent.innerHTML = '';
+      const cardsArray = timer.gеtArrayOfRandomNumbers(4, data);
+      cardsArray.forEach((e) => {
+        const card = new Cards(data[e]);
+        card.generateCard(parent);
+      });
+    }
+
     window.addEventListener('resize', slider.sliderResize);
     // slider.sliderBtns.addEventListener('click', slider.sliderClick);
     slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
     timer.startTimer();
 
-    const testCard = new Cards(data[0]);
-    console.log(testCard);
+    // document.body.append(testCard);
+    // console.log(testCard.generateCard());
   }
+  // const testCard = new Cards(data[0]);
+  // testCard.generateCard();
+
   // spa.spa();
   // slider.sliderBtns.addEventListener('click', (e) => slider.sliderClick(e));
   //   const page = window.location.pathname.split('/').pop();

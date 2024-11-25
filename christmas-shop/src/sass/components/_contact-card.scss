@@ -3,7 +3,7 @@
 @use '../general/mixins';
 
 .contact-card {
-  @extend %transition-fast;
+  @extend %transition-slow;
   background-color: variables.$color-content-background;
   @include mixins.flex();
   flex-direction: column;

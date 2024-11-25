@@ -3,6 +3,8 @@
 @use '../general/mixins';
 
 .cta {
+  @extend %transition-fast;
+
   background-image: url('../img/bg/bg-snow.png'), url('../img/bg/bg-forest.png');
   border-radius: 0 0 20px 20px;
   @include mixins.flex();
@@ -16,6 +18,8 @@
     min-height: 704px;
   }
   &__content {
+    @extend %transition-fast;
+
     @include mixins.flex();
     flex-direction: column;
     // padding: 60px 0;

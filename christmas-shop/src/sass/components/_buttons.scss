@@ -3,7 +3,7 @@
 @use '../general/mixins';
 
 .main-btn {
-  @extend %transition-fast;
+  @extend %transition-slow;
   @extend %action-small;
   height: 56px;
   padding: 20px 32px;
@@ -20,7 +20,7 @@
 }
 
 .slider-button {
-  @extend %transition-fast;
+  @extend %transition-slow;
   @include mixins.flex();
   border: 1px solid variables.$color-static-white;
   border-radius: 20px;
@@ -47,7 +47,7 @@
 }
 
 .button-arrow path {
-  @extend %transition-fast;
+  @extend %transition-slow;
 }
 
 .arrow_left {

@@ -3,7 +3,7 @@
 @use '../general/mixins';
 
 .nav {
-  @extend %transition-fast;
+  @extend %transition-slow;
   @include mixins.media() {
     position: absolute;
     // top: variables.$header-height;
@@ -27,7 +27,7 @@
     }
   }
   &__link {
-    @extend %transition-fast;
+    @extend %transition-slow;
     @extend %action-small;
     border-radius: 12px;
     padding: 12px 20px;

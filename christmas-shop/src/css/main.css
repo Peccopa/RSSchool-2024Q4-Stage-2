@@ -107,8 +107,12 @@
   text-transform: none;
 }
 
-.footer .social-ico path, .footer .social-links__link, .footer .rss-link, .slider__clip, .tabs .tab, .contact-card, .gift-card, .main-btn, .slider-button, .button-arrow path, .pageup, .loading, .burger__line, .nav, .nav__link {
+.footer .social-ico path, .footer .social-links__link, .footer .rss-link, .slider__clip, .tabs .tab, .contact-card, .gift-card, .main-btn, .slider-button, .button-arrow path, .pageup, .loading, .burger__line, .nav, .nav__link, .page, .main {
   transition: all 0.3s ease-in-out;
+}
+
+.gifts, .cta, .cta__content, .best, .best__content, .slider, .slider__container, .about, .about__container, .hero, .hero__content {
+  transition: all 0.15s ease-out;
 }
 
 * {
@@ -147,12 +151,16 @@ button {
 }
 
 .page {
-  transition: all 0.15s ease-in-out;
   position: relative;
   overflow: hidden;
   max-width: 1440px;
   margin: auto;
   opacity: 0;
+}
+
+.main {
+  border-radius: 20px;
+  background-color: #ff4646;
 }
 
 .hide-scroll {

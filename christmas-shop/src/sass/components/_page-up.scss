@@ -4,7 +4,7 @@
 
 .pageup {
   background-color: variables.$color-static-white;
-  @extend %transition-fast;
+  @extend %transition-slow;
   @include mixins.flex();
   display: none;
   position: fixed;
@@ -42,7 +42,7 @@
 // }
 
 // .button-arrow path {
-//   @extend %transition-fast;
+//   @extend %transition-slow;
 // }
 
 .arrow_up {

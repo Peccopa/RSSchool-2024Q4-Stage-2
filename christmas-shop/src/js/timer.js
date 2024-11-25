@@ -17,4 +17,17 @@ export const timer = {
       });
     }, 1000);
   },
+  getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+  gеtArrayOfRandomNumbers(length, data) {
+    const arr = [];
+    let i = 0;
+    while (i < length) {
+      let num = this.getRandomNumber(0, data.length - 1);
+      arr.includes(num) ? (i -= 1) : arr.push(num);
+      i += 1;
+    }
+    return arr;
+  },
 };
