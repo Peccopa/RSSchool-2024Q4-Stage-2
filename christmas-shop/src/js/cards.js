@@ -30,12 +30,20 @@ export class Cards {
 
     const card = document.createElement('div');
     card.className = 'gift-card';
-    // card.classList = 'gift-card gift-card_anim';
-    const img = document.createElement('img');
+
+    const img = document.createElement('div');
     img.className = 'gift-card__img';
-    img.setAttribute(`src`, `${this.getImagePath()}${categoryWord}.png`);
-    img.setAttribute(`alt`, `Gift - ${this.name}`);
+    img.style.backgroundImage = `url(${this.getImagePath()}${categoryWord}.png)`;
+    // img.setAttribute(`src`, `${this.getImagePath()}${categoryWord}.png`);
+    // img.setAttribute(`alt`, `Gift - ${this.name}`);
     card.append(img);
+
+    // const img = document.createElement('img');
+    // img.className = 'gift-card__img';
+    // img.setAttribute(`src`, `${this.getImagePath()}${categoryWord}.png`);
+    // img.setAttribute(`alt`, `Gift - ${this.name}`);
+    // card.append(img);
+
     const descr = document.createElement('div');
     descr.className = 'gift-card__descr';
     card.append(descr);
