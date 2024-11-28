@@ -4,7 +4,6 @@
 
 .best {
   @extend %transition-fast;
-
   background-image: url('../img/bg/bg-snow.png');
   @extend %section-bg;
   padding: 60px 8px;

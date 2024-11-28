@@ -4,17 +4,12 @@
 
 .hero {
   @extend %transition-fast;
-
   background-image: url('../img/bg/bg-ball.png'), url('../img/bg/bg-snow.png');
   @extend %section-bg;
   border-radius: 20px 20px 0 0;
   padding: 60px 0;
   &__content {
     @extend %transition-fast;
-
-    // transition: all 0.3s ease-in-out;
-    // opacity: 1;
-    // @extend %transition-slow;
     @include mixins.flex();
     color: variables.$color-static-white;
     flex-direction: column;

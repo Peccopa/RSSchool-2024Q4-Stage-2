@@ -5,7 +5,6 @@ export const slider = {
   sliderBtnLeft: document.querySelector('.slider-button.left'),
   sliderBtnRght: document.querySelector('.slider-button.right'),
   sliderAnimationEnd() {
-    // slider.sliderBtns.addEventListener('click', slider.sliderClick);
     slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
   },
   sliderResize() {
@@ -65,7 +64,6 @@ export const slider = {
       const clipStep = Math.trunc((sliderClipWidth - secWidth) / clickCount);
 
       if (e.target.classList.contains('right')) {
-
         if (clipPosition - clipStep === -clipStep * clickCount) {
           slider.sliderBtnRght.classList.add('slider-button_inactive');
         }
@@ -84,12 +82,9 @@ export const slider = {
         }
       }
       if (e.target.classList.contains('left')) {
-        // if (slider.sliderClip.style.left === '0px') {
-        // if (parseFloat(slider.sliderClip.style.left) === 0) {
         if (-parseFloat(slider.sliderClip.style.left) === clipStep) {
           slider.sliderBtnLeft.classList.add('slider-button_inactive');
         }
-        // if (clipPosition !== 0) {
         if (clipPosition !== 0) {
           slider.sliderClip.style.left = `${clipPosition + clipStep}px`;
           slider.sliderBtnRght.classList.remove('slider-button_inactive');

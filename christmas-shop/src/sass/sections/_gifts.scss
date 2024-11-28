@@ -4,48 +4,26 @@
 
 .gifts {
   @extend %transition-fast;
-
-  // @extend %transition-slow;
-  // height: 1400px;
-  // position: relative;
   background-image: url('../img/bg/bg-garland.png');
   background-color: variables.$color-primary;
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
   border-radius: 20px;
-  // @include mixins.flex();
   padding: 60px 5.695%;
-  // min-height: 668px;
-  // @include mixins.media() {
-  // padding: 60px 8px;
-  // }
-  // @include mixins.media($screen-width: variables.$bigmob-width) {
-  // min-height: 704px;
-  // }
-  // &-sort {
-
-  // }
   @include mixins.media($screen-width: variables.$bigmob-width) {
     padding: 60px 8px;
   }
   &__content {
     @include mixins.flex();
     flex-direction: column;
-    // padding: 60px 0;
-    // margin: 60px 0;
     gap: 20px;
   }
   &__h1 {
     max-width: 426px;
-    // max-height: 108px;
     text-align: center;
     @extend %header-1;
     color: variables.$color-static-white;
-    // @include mixins.media($screen-width: variables.$bigmob-width) {
-    // max-height: 144px;
-    // max-width: 364px;
-    // }
   }
   &__cards {
     @include mixins.flex();
