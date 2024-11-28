@@ -12,12 +12,10 @@ export class Cards {
 
   getImagePath() {
     return window.location.pathname.split('/').length > 4
-      // ? './img/'
       ? '../img/'
       : './src/img/';
   }
-  // ../img/gifts/gift-for-harmony.png
-  // ./src/img/gifts/gift-for-harmony.png
+
   getColor(category) {
     const colors = {
       work: 'purple',
@@ -29,23 +27,12 @@ export class Cards {
 
   generateCard(parent, position = 'before') {
     const categoryWord = this.getCategoryInOneWord();
-
     const card = document.createElement('div');
     card.className = 'gift-card';
-
     const img = document.createElement('div');
     img.className = 'gift-card__img';
     img.style.backgroundImage = `url(${this.getImagePath()}gifts/gift-for-${categoryWord}.png)`;
-    
-    // img.setAttribute(`src`, `${this.getImagePath()}${categoryWord}.png`);
-    // img.setAttribute(`alt`, `Gift - ${this.name}`);
     card.append(img);
-
-    // const img = document.createElement('img');
-    // img.className = 'gift-card__img';
-    // img.setAttribute(`src`, `${this.getImagePath()}${categoryWord}.png`);
-    // img.setAttribute(`alt`, `Gift - ${this.name}`);
-    // card.append(img);
 
     const descr = document.createElement('div');
     descr.className = 'gift-card__descr';
@@ -65,15 +52,3 @@ export class Cards {
     return card;
   }
 }
-
-// <div class="gift-card">
-// <img
-//   class="gift-card__img"
-//   src="./src/img/gifts/gift-for-work.png"
-//   alt="Gift card"
-// />
-// <div class="gift-card__descr">
-//   <h4 class="gift-card__h4 purple">For work</h4>
-//   <h3 class="gift-card__h3">Console.log Guru</h3>
-// </div>
-// </div>

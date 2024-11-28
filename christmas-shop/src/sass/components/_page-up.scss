@@ -10,7 +10,6 @@
   position: fixed;
   z-index: 2;
   bottom: 8px;
-  // left: calc(100% - 64px);
   right: 8px;
   border: 1px solid variables.$color-primary;
   border-radius: 100%;
@@ -33,52 +32,11 @@
   }
 }
 
-// .slider-button_inactive {
-//   border: 1px solid variables.$color-static-white-40;
-//   pointer-events: none;
-//   cursor: auto;
-//   .button-arrow path {
-//     stroke: variables.$color-static-white-40;
-//   }
-// }
-
-// .button-arrow path {
-//   @extend %transition-slow;
-// }
-
 .arrow_up {
   rotate: -90deg;
 }
-
-// .pageup {
-// z-index: 2;
-// transition: all 0.3s ease-in-out;
-// display: none;
-// width: 52px;
-// height: 52px;
-// position: fixed;
-// bottom: 40px;
-// right: 40px;
-// @include media-medium {
-//   bottom: 30px;
-//   right: 30px;
-// }
-// @include media-bigmob {
-//   bottom: 15px;
-//   right: 15px;
-// }
-// }
 
 .invisible {
   visibility: hidden;
   opacity: 0;
 }
-
-// .visible {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-// .inactive {
-//   pointer-events: none;
-// }

@@ -44,29 +44,6 @@ export const tabs = {
           timeout += 100;
         });
       }, 300);
-
-      // console.log(tabCategory);
-      // console.log(tabs.data);
-      // console.log(data.getData('../data/gifts.json'));
-
-      // console.log(card.innerText.split('\n')[0]);
-
-      // card.classList.remove('gift-card_anim');
-      // setTimeout(() => {
-      //   card.classList.remove('gift-card_none');
-      //   if (
-      //     card.innerText.split('\n')[0] !== e.target.innerText &&
-      //     e.target.innerText !== 'ALL'
-      //   ) {
-      //     card.classList.add('gift-card_none');
-      //   } else {
-      //     setTimeout(() => {
-      //       card.classList.remove('gift-card_anim');
-      //     }, timeout);
-      //     timeout += 100;
-      //   }
-      // }, 300);
-      // });
     }
   },
 
@@ -78,33 +55,4 @@ export const tabs = {
       card.generateCard(tabs.parent);
     });
   },
-
-  // clickOnTabs(e) {
-  //   if (e.target.classList.contains('tab')) {
-  //     document
-  //       .querySelectorAll('.tab')
-  //       .forEach((e) => e.classList.remove('tab_selected'));
-  //     e.target.classList.add('tab_selected');
-  //     const cards = document.querySelectorAll('.gift-card');
-  //     let timeout = 0;
-  //     cards.forEach((card) => {
-  //       card.classList.remove('gift-card_anim');
-  //       card.classList.add('gift-card_anim');
-  //       setTimeout(() => {
-  //         card.classList.remove('gift-card_none');
-  //         if (
-  //           card.innerText.split('\n')[0] !== e.target.innerText &&
-  //           e.target.innerText !== 'ALL'
-  //         ) {
-  //           card.classList.add('gift-card_none');
-  //         } else {
-  //           setTimeout(() => {
-  //             card.classList.remove('gift-card_anim');
-  //           }, timeout);
-  //           timeout += 100;
-  //         }
-  //       }, 300);
-  //     });
-  //   }
-  // },
 };

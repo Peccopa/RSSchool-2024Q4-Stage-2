@@ -6,14 +6,12 @@
   @extend %transition-slow;
   @include mixins.media() {
     position: absolute;
-    // top: variables.$header-height;
     top: 0;
     left: 100%;
     width: 100%;
     height: 100%;
     background-color: variables.$color-static-white;
     &_opened {
-      // top: variables.$header-height;
       left: 0%;
     }
   }

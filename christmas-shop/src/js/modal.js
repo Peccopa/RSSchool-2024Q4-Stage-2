@@ -70,44 +70,16 @@ export class Modal extends Cards {
       statPointsBlock.append(statStarsBlock);
 
       let score = parseInt(this[e]) / 100;
-      // console.log(parseInt(this[e]) / 100);
       for (let i = 0; i < 5; i += 1) {
         const statStar = document.createElement('div');
         statStar.className = 'stat__star';
         if (score <= 0) statStar.style.opacity = '0.1';
         score -= 1;
-        // statStar.style.backgroundImage = `url(${this.getImagePath()}ico/snowflake.svg')`;
-        // statStar.src = `${this.getImagePath()}ico/snowflake.svg'`;
-        // console.log(`url(${this.getImagePath()}ico/snowflake.svg')`);
         statStarsBlock.append(statStar);
       }
       setTimeout(() => {
         modal.classList.add('show-modal');
       }, 0);
     });
-
-    // const categoryWord = this.getCategoryInOneWord();
-    // const card = document.createElement('div');
-    // card.className = 'gift-card';
-    // const img = document.createElement('div');
-    // img.className = 'gift-card__img';
-    // img.style.backgroundImage = `url(${this.getImagePath()}${categoryWord}.png)`;
-    // card.append(img);
-    // const descr = document.createElement('div');
-    // descr.className = 'gift-card__descr';
-    // card.append(descr);
-    // const descrH4 = document.createElement('h4');
-    // descrH4.classList = `gift-card__h4 ${this.getColor(categoryWord)}`;
-    // descrH4.textContent = `${this.category}`;
-    // descr.append(descrH4);
-    // const descrH3 = document.createElement('h4');
-    // descrH3.className = 'gift-card__h3';
-    // descrH3.textContent = `${this.name}`;
-    // descr.append(descrH3);
-    // parent.append(card);
-  }
-
-  logs() {
-    console.log(this.name, this.category, this.description, this.live);
   }
 }

@@ -44,11 +44,6 @@ export const links = {
         .closest('.gift-card')
         .querySelector('.gift-card__h3').textContent;
       const cardObj = tabs.data.find((e) => e.name === targetText);
-      // console.log(tabs.data);
-      // console.log();
-
-      // console.log(e.target.querySelector('.gift-card__h3'));
-
       const modal = new Modal(cardObj);
       modal.generateModal(document.querySelector('.overlay'));
       pageup.showPageUpIco();
@@ -77,11 +72,7 @@ export const links = {
       }, 150);
     }
 
-    // document.querySelector('.loading').classList.add('opacity-1');
-    // document.querySelector('.loading').style.display = 'block';
-
     if (target.contains('gifts-link')) links.goToGiftsPage(e);
-
     if (target.contains('home-link')) {
       if (burger.menu.classList.contains('burger_opened'))
         burger.openBurgerMenu();
