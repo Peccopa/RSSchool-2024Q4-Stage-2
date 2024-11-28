@@ -1,6 +1,7 @@
 export class Cards {
   constructor({ name, category }) {
-    (this.name = name), (this.category = category);
+    this.name = name;
+    this.category = category;
   }
 
   getCategoryInOneWord() {
@@ -11,8 +12,8 @@ export class Cards {
 
   getImagePath() {
     return window.location.pathname.split('/').length > 3
-      ? '../img/gifts/gift-for-'
-      : './src/img/gifts/gift-for-';
+      ? '../img/'
+      : './src/img/';
   }
   // ../img/gifts/gift-for-harmony.png
   // ./src/img/gifts/gift-for-harmony.png
@@ -33,7 +34,7 @@ export class Cards {
 
     const img = document.createElement('div');
     img.className = 'gift-card__img';
-    img.style.backgroundImage = `url(${this.getImagePath()}${categoryWord}.png)`;
+    img.style.backgroundImage = `url(${this.getImagePath()}gifts/gift-for-${categoryWord}.png)`;
     // img.setAttribute(`src`, `${this.getImagePath()}${categoryWord}.png`);
     // img.setAttribute(`alt`, `Gift - ${this.name}`);
     card.append(img);
@@ -59,6 +60,7 @@ export class Cards {
     descr.append(descrH3);
 
     parent.append(card);
+    return card;
   }
 }
 

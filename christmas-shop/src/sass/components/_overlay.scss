@@ -1,14 +1,17 @@
 @use '../general/variables';
 @use '../general/placeholders';
-// @use '../general/mixins';
+@use '../general/mixins';
 
 .overlay {
-  visibility: hidden;
   background-color: variables.$color-overlay;
   @extend %transition-fast;
+  // transition: opacity 0.3s ease-in-out;
+  @include mixins.flex();
+
+  visibility: hidden;
   position: fixed;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   z-index: 3;
   opacity: 0;
   left: 0;

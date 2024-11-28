@@ -1,10 +1,13 @@
 @use '../general/variables';
 @use '../general/placeholders';
-// @use '../general/mixins';
+@use '../general/mixins';
 
 .gift-card {
   @extend %transition-slow;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  // display: block;
+  max-width: 400px;
   // order: 1;
   min-width: 310px;
   min-height: 342px;
@@ -40,21 +43,106 @@
     background-size: cover;
   }
   &__descr {
+    display: flex;
+    flex-direction: column;
     // max-width: 310px;
     background-color: variables.$color-static-white;
     border-radius: 20px;
     padding: 20px;
     min-height: 112px;
     // word-wrap: break-word;
+    gap: 8px;
   }
   &__h4 {
     @extend %header-4;
-    margin-bottom: 8px;
+    // margin-bottom: 8px;
   }
   &__h3 {
     @extend %header-3;
     text-wrap: balance;
     width: min-content;
     min-width: fit-content;
+  }
+}
+
+.modal {
+  position: relative;
+  margin: 0 8px;
+  cursor: auto;
+  @media (hover: hover) {
+    &:hover {
+      color: variables.$color-dark;
+    }
+  }
+  &__cross {
+    position: absolute;
+    cursor: pointer;
+    top: 11px;
+    right: 13px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    @media (hover: hover) {
+      &:hover > .modal__cross-line {
+        border: rgba(24, 28, 41, 0.3) 1px solid;
+      }
+    }
+    &-line {
+      @extend %transition-slow;
+      position: absolute;
+      // z-index: 3;
+      top: 50%;
+      left: 12%;
+      width: 30px;
+      border: variables.$color-dark 1px solid;
+      border-radius: 1px;
+      &:first-child {
+        rotate: 45deg;
+      }
+      &:last-child {
+        rotate: -45deg;
+      }
+    }
+  }
+  &__descr {
+    @extend %paragraph;
+  }
+  &__stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    .stats__header {
+      @extend %header-4;
+      margin-bottom: 8px;
+    }
+    .stat {
+      // width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &__name {
+        @extend %paragraph;
+        text-transform: capitalize;
+      }
+      &__points-block {
+        display: flex;
+        gap: 12px;
+      }
+      &__points {
+        @extend %paragraph;
+      }
+      &__stars-block {
+        @include mixins.flex();
+        gap: 8px;
+      }
+      &__star {
+        background-image: url(../../src/img/ico/snowflake.svg);
+        background-position: center;
+        background-size: cover;
+        width: 16px;
+        height: 16px;
+        // opacity: 0.1;
+      }
+    }
   }
 }

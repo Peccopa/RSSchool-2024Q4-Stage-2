@@ -25,13 +25,13 @@ window.addEventListener('load', (event) => {
 });
 
 const loadPage = function (data) {
+  tabs.data = data;
   loader.removeLoader();
   window.addEventListener('click', links.checkClick);
   burger.menu.addEventListener('click', burger.openBurgerMenu);
   // burger.nav.addEventListener('click', (e) => burger.link(e));
   if (window.location.pathname === '/christmas-shop/src/pages/gifts.html') {
     if (data) {
-      tabs.data = data;
       tabs.generateGiftsCardsBlock(data);
     }
     window.addEventListener('scroll', pageup.showPageUpIco);

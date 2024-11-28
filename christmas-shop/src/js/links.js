@@ -1,5 +1,7 @@
 import { burger } from './burger.js';
+import { Modal } from './modal.js';
 import { scroll } from './scroll.js';
+import { tabs } from './tabs.js';
 
 export const links = {
   checkPageAndGoToAnother(e) {
@@ -27,18 +29,43 @@ export const links = {
   checkClick(e) {
     const timeout = burger.menu.classList.contains('burger_opened') ? 300 : 0;
     const target = e.target.classList;
+    const overlay = document.querySelector('.overlay');
 
-    if (target.value.substring(0, 9) === 'gift-card') {
-      document.querySelector('.overlay').classList.add('show-overlay');
+    if (
+      target.value.substring(0, 9) === 'gift-card' &&
+      !overlay.classList.contains('show-overlay')
+    ) {
+      overlay.classList.add('show-overlay');
       scroll.hideScroll();
       document.addEventListener('keyup', links.escapeListener);
+      const targetText = e.target
+        .closest('.gift-card')
+        .querySelector('.gift-card__h3').textContent;
+      const cardObj = tabs.data.find((e) => e.name === targetText);
+      // console.log(tabs.data);
+      // console.log();
 
+      // console.log(e.target.querySelector('.gift-card__h3'));
+
+      const modal = new Modal(cardObj);
+      modal.generateModal(document.querySelector('.overlay'));
     }
 
     if (target.contains('overlay')) {
       target.remove('show-overlay');
       scroll.hideScroll();
       document.removeEventListener('keyup', links.escapeListener);
+      links.removeModalCard();
+    }
+
+    if (
+      target.value.substring(0, 5) === 'modal' &&
+      target.value !== 'modal__descr'
+    ) {
+      document.querySelector('.overlay').classList.remove('show-overlay');
+      scroll.hideScroll();
+      document.removeEventListener('keyup', links.escapeListener);
+      links.removeModalCard();
     }
 
     // document.querySelector('.loading').classList.add('opacity-1');
@@ -83,6 +110,13 @@ export const links = {
       document.querySelector('.overlay').classList.remove('show-overlay');
       scroll.hideScroll();
       document.removeEventListener('keyup', links.escapeListener);
+      links.removeModalCard();
     }
+  },
+  removeModalCard() {
+    setTimeout(() => {
+      const card = document.querySelector('.modal');
+      card.remove();
+    }, 150);
   },
 };
