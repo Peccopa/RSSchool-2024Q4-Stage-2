@@ -12,7 +12,7 @@
     gap: 6.5px;
   }
   &__line {
-    @extend %transition-fast;
+    @extend %transition-slow;
     width: 22px;
     border: 1px solid variables.$color-dark;
     border-radius: 1px;

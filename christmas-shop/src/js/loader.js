@@ -3,9 +3,9 @@ export const loader = {
     setTimeout(() => {
       document.querySelector('.page').classList.add('opacity-1');
       document.querySelector('.loading').classList.add('opacity-0');
-    }, 500);
+    }, 300);
     setTimeout(() => {
       document.querySelector('.loading').style.display = 'none';
-    }, 1000);
+    }, 500);
   },
 };

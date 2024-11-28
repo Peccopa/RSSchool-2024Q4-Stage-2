@@ -1,0 +1,24 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.overlay {
+  background-color: variables.$color-overlay;
+  @extend %transition-fast;
+  // transition: opacity 0.3s ease-in-out;
+  @include mixins.flex();
+
+  visibility: hidden;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+
+.show-overlay {
+  visibility: visible;
+  opacity: 1;
+}

@@ -25,13 +25,13 @@
     gap: 12px;
   }
   .social-ico path {
-    @extend %transition-fast;
+    @extend %transition-slow;
   }
   .social-links {
     @include mixins.flex();
     gap: 12px;
     &__link {
-      @extend %transition-fast;
+      @extend %transition-slow;
       padding: 8px;
       @media (hover: hover) {
         &:hover .social-ico path {
@@ -46,7 +46,7 @@
   }
   .rss-link {
     @extend %caption;
-    @extend %transition-fast;
+    @extend %transition-slow;
     @media (hover: hover) {
       &:hover {
         color: variables.$color-primary;

@@ -3,6 +3,11 @@
 @use '../general/mixins';
 
 .gifts {
+  @extend %transition-fast;
+
+  // @extend %transition-slow;
+  // height: 1400px;
+  // position: relative;
   background-image: url('../img/bg/bg-garland.png');
   background-color: variables.$color-primary;
   background-repeat: no-repeat;
@@ -13,10 +18,13 @@
   padding: 60px 5.695%;
   // min-height: 668px;
   // @include mixins.media() {
-    // padding: 60px 8px;
+  // padding: 60px 8px;
   // }
   // @include mixins.media($screen-width: variables.$bigmob-width) {
-    // min-height: 704px;
+  // min-height: 704px;
+  // }
+  // &-sort {
+
   // }
   @include mixins.media($screen-width: variables.$bigmob-width) {
     padding: 60px 8px;
@@ -35,8 +43,8 @@
     @extend %header-1;
     color: variables.$color-static-white;
     // @include mixins.media($screen-width: variables.$bigmob-width) {
-      // max-height: 144px;
-      // max-width: 364px;
+    // max-height: 144px;
+    // max-width: 364px;
     // }
   }
   &__cards {

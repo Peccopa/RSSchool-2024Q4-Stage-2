@@ -3,6 +3,8 @@
 @use '../general/mixins';
 
 .about {
+  @extend %transition-fast;
+
   background-image: url('../img/bg/bg-snow.png');
   @extend %section-bg;
   padding: 60px 5.695%;
@@ -10,6 +12,8 @@
     padding: 60px 8px;
   }
   &__container {
+    @extend %transition-fast;
+
     background-color: variables.$color-static-white;
     @include mixins.flex();
     border-radius: 20px;
