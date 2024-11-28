@@ -4,9 +4,9 @@
 
 .overlay {
   background-color: variables.$color-overlay;
-  @extend %transition-fast;
+  @extend %transition-slow;
   // transition: opacity 0.3s ease-in-out;
-  @include mixins.flex();
+  // @include mixins.flex();
 
   visibility: hidden;
   position: fixed;

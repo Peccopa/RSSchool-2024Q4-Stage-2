@@ -30,12 +30,13 @@ const loadPage = function (data) {
   window.addEventListener('click', links.checkClick);
   burger.menu.addEventListener('click', burger.openBurgerMenu);
   // burger.nav.addEventListener('click', (e) => burger.link(e));
-  if (window.location.pathname === '/christmas-shop/src/pages/gifts.html') {
+  if (window.location.pathname.split('/').length > 4) {
     if (data) {
       tabs.generateGiftsCardsBlock(data);
     }
     window.addEventListener('scroll', pageup.showPageUpIco);
     tabs.tabs.addEventListener('click', tabs.clickOnTabs);
+    pageup.showPageUpIco();
   } else {
     if (data) {
       const parent = document.querySelector('.best__cards');

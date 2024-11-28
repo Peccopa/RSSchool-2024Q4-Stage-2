@@ -81,6 +81,9 @@ export class Modal extends Cards {
         // console.log(`url(${this.getImagePath()}ico/snowflake.svg')`);
         statStarsBlock.append(statStar);
       }
+      setTimeout(() => {
+        modal.classList.add('show-modal');
+      }, 0);
     });
 
     // const categoryWord = this.getCategoryInOneWord();

@@ -1,12 +1,13 @@
 import { burger } from './burger.js';
 import { Modal } from './modal.js';
+import { pageup } from './pageup.js';
 import { scroll } from './scroll.js';
 import { tabs } from './tabs.js';
 
 export const links = {
   checkPageAndGoToAnother(e) {
     window.location.href =
-      window.location.pathname.split('/').length > 3
+      window.location.pathname.split('/').length > 4
         ? '../../index.html'
         : './index.html';
   },
@@ -33,7 +34,8 @@ export const links = {
 
     if (
       target.value.substring(0, 9) === 'gift-card' &&
-      !overlay.classList.contains('show-overlay')
+      !overlay.classList.contains('show-overlay') &&
+      !document.querySelector('.modal')
     ) {
       overlay.classList.add('show-overlay');
       scroll.hideScroll();
@@ -49,10 +51,13 @@ export const links = {
 
       const modal = new Modal(cardObj);
       modal.generateModal(document.querySelector('.overlay'));
+      pageup.showPageUpIco();
     }
 
-    if (target.contains('overlay')) {
-      target.remove('show-overlay');
+    if (target.contains('overlay') && document.querySelector('.modal')) {
+      setTimeout(() => {
+        document.querySelector('.overlay').classList.remove('show-overlay');
+      }, 150);
       scroll.hideScroll();
       document.removeEventListener('keyup', links.escapeListener);
       links.removeModalCard();
@@ -60,12 +65,16 @@ export const links = {
 
     if (
       target.value.substring(0, 5) === 'modal' &&
-      target.value !== 'modal__descr'
+      target.value !== 'modal__descr' &&
+      target.value !== 'modal__stats' &&
+      document.querySelector('.modal')
     ) {
-      document.querySelector('.overlay').classList.remove('show-overlay');
       scroll.hideScroll();
       document.removeEventListener('keyup', links.escapeListener);
       links.removeModalCard();
+      setTimeout(() => {
+        document.querySelector('.overlay').classList.remove('show-overlay');
+      }, 150);
     }
 
     // document.querySelector('.loading').classList.add('opacity-1');
@@ -107,16 +116,22 @@ export const links = {
   },
   escapeListener(e) {
     if (e.key === 'Escape') {
-      document.querySelector('.overlay').classList.remove('show-overlay');
+      setTimeout(() => {
+        document.querySelector('.overlay').classList.remove('show-overlay');
+      }, 150);
       scroll.hideScroll();
       document.removeEventListener('keyup', links.escapeListener);
       links.removeModalCard();
     }
   },
   removeModalCard() {
+    const card = document.querySelector('.modal');
     setTimeout(() => {
-      const card = document.querySelector('.modal');
+      card.classList.add('hide-modal');
+    }, 0);
+    setTimeout(() => {
       card.remove();
-    }, 150);
+      pageup.showPageUpIco();
+    }, 300);
   },
 };
