@@ -27,7 +27,7 @@ const loadPage = function (data) {
   burger.menu.addEventListener('click', burger.openBurgerMenu);
   if (window.location.pathname.split('/').length > 4) {
     if (data) {
-      tabs.generateGiftsCardsBlock(data);
+      tabs.generateGiftsCardsBlock(36, data);
     }
     window.addEventListener('scroll', pageup.showPageUpIco);
     tabs.tabs.addEventListener('click', tabs.clickOnTabs);
