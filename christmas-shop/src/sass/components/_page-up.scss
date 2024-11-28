@@ -4,12 +4,13 @@
 
 .pageup {
   background-color: variables.$color-static-white;
-  @extend %transition-slow;
+  @extend %transition-fast;
   @include mixins.flex();
   display: none;
   position: fixed;
   z-index: 2;
   bottom: 8px;
+  // left: calc(100% - 64px);
   right: 8px;
   border: 1px solid variables.$color-primary;
   border-radius: 100%;

@@ -11,9 +11,9 @@ export class Cards {
   }
 
   getImagePath() {
-    return window.location.pathname.split('/').length > 3
+    return window.location.pathname.split('/').length > 4
       // ? './img/'
-      ? './src/img/'
+      ? '../img/'
       : './src/img/';
   }
   // ../img/gifts/gift-for-harmony.png

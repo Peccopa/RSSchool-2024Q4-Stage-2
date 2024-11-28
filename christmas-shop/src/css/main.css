@@ -107,11 +107,11 @@
   text-transform: none;
 }
 
-.footer .social-ico path, .footer .social-links__link, .footer .rss-link, .slider__clip, .tabs .tab, .contact-card, .gift-card, .modal__cross-line, .main-btn, .slider-button, .button-arrow path, .pageup, .loading, .burger__line, .nav, .nav__link, .page, .main {
+.footer .social-ico path, .footer .social-links__link, .footer .rss-link, .slider__clip, .tabs .tab, .contact-card, .gift-card, .modal__cross-line, .main-btn, .slider-button, .button-arrow path, .loading, .burger__line, .nav, .nav__link, .overlay, .page, .main {
   transition: all 0.3s ease-in-out;
 }
 
-.gifts, .cta, .cta__content, .best, .best__content, .slider, .slider__container, .about, .about__container, .hero, .hero__content, .overlay {
+.gifts, .cta, .cta__content, .best, .best__content, .slider, .slider__container, .about, .about__container, .hero, .hero__content, .pageup {
   transition: all 0.15s ease-out;
 }
 
@@ -178,9 +178,6 @@ button {
 }
 .overlay {
   background-color: rgba(24, 28, 41, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   visibility: hidden;
   position: fixed;
   height: 100vh;
@@ -492,8 +489,11 @@ button {
 }
 
 .modal {
-  position: relative;
-  margin: 0 8px;
+  min-width: 364px;
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%, -50%);
   cursor: auto;
 }
 @media (hover: hover) {
@@ -561,6 +561,14 @@ button {
   background-size: cover;
   width: 16px;
   height: 16px;
+}
+
+.show-modal {
+  left: 50%;
+}
+
+.hide-modal {
+  left: 150%;
 }
 
 .purple {

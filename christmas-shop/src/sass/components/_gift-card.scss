@@ -66,8 +66,12 @@
 }
 
 .modal {
-  position: relative;
-  margin: 0 8px;
+  min-width: 364px;
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  // margin: 0 8px;
   cursor: auto;
   @media (hover: hover) {
     &:hover {
@@ -145,4 +149,13 @@
       }
     }
   }
+}
+.show-modal {
+  left: 50%;
+  // transform: rotate3d(90deg);
+}
+
+.hide-modal {
+  left: 150%;
+  // transform: rotate3d(190deg);
 }
