@@ -29,10 +29,10 @@ export const tabs = {
       });
       setTimeout(() => {
         if (e.target.innerText === 'ALL') {
-          tabs.generateGiftsCardsBlock(tabs.data);
+          tabs.generateGiftsCardsBlock(36, tabs.data);
         } else {
           const tabCategoryArray = tabs.getTabCategoryArray(e);
-          tabs.generateGiftsCardsBlock(tabCategoryArray);
+          tabs.generateGiftsCardsBlock(12, tabCategoryArray);
         }
         cards = document.querySelectorAll('.gift-card');
         let timeout = 100;
@@ -47,9 +47,9 @@ export const tabs = {
     }
   },
 
-  generateGiftsCardsBlock(data) {
+  generateGiftsCardsBlock(length, data) {
     tabs.parent.innerHTML = '';
-    const cardsArray = timer.gеtArrayOfRandomNumbers(12, data);
+    const cardsArray = timer.gеtArrayOfRandomNumbers(length, data);
     cardsArray.forEach((e) => {
       const card = new Cards(data[e]);
       card.generateCard(tabs.parent);
