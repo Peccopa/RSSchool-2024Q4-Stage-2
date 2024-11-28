@@ -12,7 +12,8 @@ export class Cards {
 
   getImagePath() {
     return window.location.pathname.split('/').length > 3
-      ? '../img/'
+      // ? './img/'
+      ? './src/img/'
       : './src/img/';
   }
   // ../img/gifts/gift-for-harmony.png
@@ -35,6 +36,7 @@ export class Cards {
     const img = document.createElement('div');
     img.className = 'gift-card__img';
     img.style.backgroundImage = `url(${this.getImagePath()}gifts/gift-for-${categoryWord}.png)`;
+    
     // img.setAttribute(`src`, `${this.getImagePath()}${categoryWord}.png`);
     // img.setAttribute(`alt`, `Gift - ${this.name}`);
     card.append(img);
