@@ -12,6 +12,9 @@
   border-radius: 20px;
   padding: 20px;
   gap: 12px;
+  @include mixins.media($screen-width: variables.$bigmob-width) {
+    min-width: auto;
+  }
   &__img {
     width: 80px;
     height: 80px;
