@@ -1,8 +1,12 @@
 export const timer = {
   getDate() {
-    const nextYear = new Date().getFullYear() + 1;
+    const date = new Date();
+    const utcDate = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
+    const nextYear = utcDate.getFullYear() + 1;
+
     const nextNewYear = new Date(nextYear, 0, 1, 0, 0, 0).getTime();
-    const currentTime = new Date().getTime();
+    const currentTime = new Date(utcDate).getTime();
+
     const remains = Math.trunc((nextNewYear - currentTime) / 1000);
     const days = Math.trunc(remains / 86400);
     const hours = Math.trunc((remains - days * 86400) / 3600);

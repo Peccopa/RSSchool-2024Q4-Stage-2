@@ -216,7 +216,7 @@ button {
   .nav__list {
     justify-content: center;
     flex-direction: column;
-    height: calc(100dvh - 64px);
+    height: calc(100dvh + 64px);
   }
 }
 .nav__link {

@@ -21,7 +21,8 @@
     @include mixins.media() {
       justify-content: center;
       flex-direction: column;
-      height: calc(100dvh - variables.$header-height);
+      height: calc(100dvh + variables.$header-height);
+      // height: calc(100dvh);
     }
   }
   &__link {
