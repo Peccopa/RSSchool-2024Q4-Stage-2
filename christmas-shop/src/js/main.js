@@ -44,8 +44,8 @@ const loadPage = function (data) {
     }
 
     window.addEventListener('resize', slider.sliderResize);
-    // slider.sliderBtns.addEventListener('click', slider.sliderClick);
-    slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
+    slider.sliderBtns.addEventListener('click', slider.sliderClick);
+    // slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
     timer.startTimer();
   }
 };

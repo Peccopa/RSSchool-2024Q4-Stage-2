@@ -5,7 +5,8 @@ export const slider = {
   sliderBtnLeft: document.querySelector('.slider-button.left'),
   sliderBtnRght: document.querySelector('.slider-button.right'),
   sliderAnimationEnd() {
-    slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
+    // slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
+    slider.sliderBtns.addEventListener('click', slider.sliderClick);
   },
   sliderResize() {
     slider.sliderClip.style.left = `0px`;
