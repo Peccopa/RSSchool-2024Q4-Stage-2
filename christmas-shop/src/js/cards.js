@@ -25,7 +25,7 @@ export class Cards {
     return colors[category];
   }
 
-  generateCard(parent, position = 'before') {
+  generateCard(parent) {
     const categoryWord = this.getCategoryInOneWord();
     const card = document.createElement('div');
     card.className = 'gift-card';

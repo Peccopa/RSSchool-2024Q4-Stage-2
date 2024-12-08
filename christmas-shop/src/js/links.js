@@ -5,7 +5,7 @@ import { scroll } from './scroll.js';
 import { tabs } from './tabs.js';
 
 export const links = {
-  checkPageAndGoToAnother(e) {
+  checkPageAndGoToAnother() {
     window.location.href =
       window.location.pathname.split('/').length > 4
         ? '../../index.html'

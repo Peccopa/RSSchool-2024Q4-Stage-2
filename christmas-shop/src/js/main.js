@@ -10,7 +10,7 @@ import { pageup } from './pageup.js';
 import { tabs } from './tabs.js';
 import { Cards } from './cards.js';
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
   const url = window.location.pathname.includes('gifts')
     ? '../data/gifts.json'
     : './src/data/gifts.json';

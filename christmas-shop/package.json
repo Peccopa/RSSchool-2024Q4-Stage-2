@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4/issues"
   },
-  "homepage": "https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4#readme"
+  "homepage": "https://github.com/rolling-scopes-school/peccopa-JSFE2024Q4#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0"
+  }
 }
