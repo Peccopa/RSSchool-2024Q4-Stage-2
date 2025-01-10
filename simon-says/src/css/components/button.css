@@ -30,6 +30,10 @@
   opacity: 0.25;
 }
 
+.blocked-btn {
+  pointer-events: none;
+}
+
 @media (hover: hover) {
   .button:hover {
     transform: translate(-3px, -3px);

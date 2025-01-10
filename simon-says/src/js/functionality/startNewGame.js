@@ -22,6 +22,16 @@ export const startNewGame = function (components) {
   display.classList.remove('inactive-display');
   textDisplay.textContent = 'Try to remember';
   startButton.classList.add('inactive-btn');
+  // block keys and buttons
+  function blockGameKeys(object) {
+    for (const key in object) {
+      object[key].classList.add('blocked-key');
+    }
+  }
+  blockGameKeys(components.gameKeys.letterKeys);
+  blockGameKeys(components.gameKeys.numberKeys);
+  newButton.classList.add('blocked-btn');
+  repeatButton.classList.add('blocked-btn');
 
   return gameStatus;
 };

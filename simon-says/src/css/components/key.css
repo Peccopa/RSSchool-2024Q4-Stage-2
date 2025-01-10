@@ -17,6 +17,10 @@
   opacity: 0.25;
 }
 
+.blocked-key {
+  pointer-events: none;
+}
+
 @media (hover: hover) {
   .key:hover {
     opacity: 0.75;
