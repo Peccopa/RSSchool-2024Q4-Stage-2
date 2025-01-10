@@ -8,14 +8,14 @@ export const createGameRounds = (parent) => {
 
   const roundsText = new PageElement({
     tag: 'span',
-    text: 'round',
+    text: 'Round:',
     classes: ['rounds-text'],
     parent: gameRounds,
   });
 
   const roundsCount = new PageElement({
     tag: 'span',
-    text: 'one',
+    text: 'One',
     classes: ['rounds-count'],
     parent: gameRounds,
   });

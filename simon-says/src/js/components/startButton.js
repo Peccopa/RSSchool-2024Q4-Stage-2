@@ -4,7 +4,7 @@ export const createStartButton = (parent = null) => {
   return new PageElement({
     tag: 'button',
     text: 'Start',
-    classes: ['start-button'],
+    classes: ['start-button', 'button'],
     attribute: ['type', 'button'],
     parent: parent,
   });

@@ -9,7 +9,7 @@ export const createGameLevels = (parent) => {
   const levelEasy = new PageElement({
     tag: 'button',
     text: 'Easy',
-    classes: ['level-easy'],
+    classes: ['level-easy', 'button'],
     attribute: ['type', 'button'],
     parent: gameLevels,
   });
@@ -17,7 +17,7 @@ export const createGameLevels = (parent) => {
   const levelMedium = new PageElement({
     tag: 'button',
     text: 'Medium',
-    classes: ['level-medium'],
+    classes: ['level-medium', 'button'],
     attribute: ['type', 'button'],
     parent: gameLevels,
   });
@@ -25,7 +25,7 @@ export const createGameLevels = (parent) => {
   const levelHard = new PageElement({
     tag: 'button',
     text: 'Hard',
-    classes: ['level-hard'],
+    classes: ['level-hard', 'button'],
     attribute: ['type', 'button'],
     parent: gameLevels,
   });

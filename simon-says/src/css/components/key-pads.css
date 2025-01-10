@@ -1,0 +1,37 @@
+.key-num-pad {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.key-lett-pad {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.key-line-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.key-line-2 {
+  width: 89.85%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.key-line-3 {
+  width: 59.4%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}

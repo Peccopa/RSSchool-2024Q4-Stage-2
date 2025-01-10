@@ -4,7 +4,7 @@ export const createRepeatButton = (parent = null) => {
   return new PageElement({
     tag: 'button',
     text: 'Repeat sequence',
-    classes: ['repeat-button'],
+    classes: ['repeat-button', 'button'],
     attribute: ['type', 'button'],
     parent: parent,
   });

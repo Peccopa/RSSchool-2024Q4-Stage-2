@@ -17,22 +17,43 @@ export const createGameKeys = (parent) => {
     }, {});
   }
 
-  const keyNumberPad = new PageElement({
-    classes: ['key-number-pad'],
+  const keyNumPad = new PageElement({
+    classes: ['key-num-pad'],
     parent: parent,
   });
 
-  const keyLetterPad = new PageElement({
-    classes: ['key-letter-pad'],
+  const keyLettPad = new PageElement({
+    classes: ['key-lett-pad'],
     parent: parent,
   });
 
-  const numberKeys = getKeys(data.numbers, keyNumberPad);
-  const letterKeys = getKeys(data.letters, keyLetterPad);
+  const keyLine1 = new PageElement({
+    classes: ['key-line-1'],
+    parent: keyLettPad,
+  });
+
+  const keyLine2 = new PageElement({
+    classes: ['key-line-2'],
+    parent: keyLettPad,
+  });
+
+  const keyLine3 = new PageElement({
+    classes: ['key-line-3'],
+    parent: keyLettPad,
+  });
+
+  const numberKeys = getKeys(data.numbers, keyNumPad);
+  const letterKeys1 = getKeys(data.letters.slice(0, 10), keyLine1);
+  const letterKeys2 = getKeys(data.letters.slice(10, 19), keyLine2);
+  const letterKeys3 = getKeys(data.letters.slice(20), keyLine3);
+  const letterKeys = Object.assign({}, letterKeys1, letterKeys2, letterKeys3);
 
   return {
-    keyNumberPad,
-    keyLetterPad,
+    keyNumPad,
+    keyLettPad,
+    keyLine1,
+    keyLine2,
+    keyLine3,
     numberKeys,
     letterKeys,
   };
