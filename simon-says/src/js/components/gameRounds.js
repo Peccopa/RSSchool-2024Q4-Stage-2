@@ -2,7 +2,7 @@ import { PageElement } from '../constructors/PageElement.js';
 
 export const createGameRounds = (parent) => {
   const gameRounds = new PageElement({
-    classes: ['game-rounds'],
+    classes: ['game-rounds', 'inactive-rounds'],
     parent: parent,
   });
 
@@ -15,7 +15,7 @@ export const createGameRounds = (parent) => {
 
   const roundsCount = new PageElement({
     tag: 'span',
-    text: 'One',
+    text: '1',
     classes: ['rounds-count'],
     parent: gameRounds,
   });

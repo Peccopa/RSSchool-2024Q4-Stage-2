@@ -9,7 +9,7 @@ export const createGameLevels = (parent) => {
   const levelEasy = new PageElement({
     tag: 'button',
     text: 'Easy',
-    classes: ['level-easy', 'button'],
+    classes: ['level-easy', 'button', 'selected-btn'],
     attribute: ['type', 'button'],
     parent: gameLevels,
   });

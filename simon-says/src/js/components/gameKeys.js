@@ -28,17 +28,17 @@ export const createGameKeys = (parent) => {
   });
 
   const keyLine1 = new PageElement({
-    classes: ['key-line-1'],
+    classes: ['key-line-1', 'inactive-key'],
     parent: keyLettPad,
   });
 
   const keyLine2 = new PageElement({
-    classes: ['key-line-2'],
+    classes: ['key-line-2', 'inactive-key'],
     parent: keyLettPad,
   });
 
   const keyLine3 = new PageElement({
-    classes: ['key-line-3'],
+    classes: ['key-line-3', 'inactive-key'],
     parent: keyLettPad,
   });
 

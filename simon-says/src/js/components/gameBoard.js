@@ -17,7 +17,7 @@ export const createGameBoard = (parent) => {
   });
 
   const display = new PageElement({
-    classes: ['display'],
+    classes: ['display', 'inactive-display'],
     parent: page,
   });
 
