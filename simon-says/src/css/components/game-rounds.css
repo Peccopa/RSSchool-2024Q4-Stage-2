@@ -21,6 +21,9 @@
   outline: 1px solid antiquewhite;
   transform: translate(-3px, -3px);
   box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.75);
+
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 .inactive-rounds {
