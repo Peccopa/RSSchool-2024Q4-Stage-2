@@ -23,22 +23,22 @@ export const createGameKeys = (parent) => {
   });
 
   const keyLettPad = new PageElement({
-    classes: ['key-lett-pad'],
+    classes: ['key-lett-pad', 'inactive-key'],
     parent: parent,
   });
 
   const keyLine1 = new PageElement({
-    classes: ['key-line-1', 'inactive-key'],
+    classes: ['key-line-1'],
     parent: keyLettPad,
   });
 
   const keyLine2 = new PageElement({
-    classes: ['key-line-2', 'inactive-key'],
+    classes: ['key-line-2'],
     parent: keyLettPad,
   });
 
   const keyLine3 = new PageElement({
-    classes: ['key-line-3', 'inactive-key'],
+    classes: ['key-line-3'],
     parent: keyLettPad,
   });
 

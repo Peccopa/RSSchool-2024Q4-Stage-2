@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 .key-lett-pad {
@@ -13,6 +16,9 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 .key-line-1 {

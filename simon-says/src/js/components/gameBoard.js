@@ -1,14 +1,14 @@
 import { PageElement } from '../constructors/PageElement.js';
 
 export const createGameBoard = (parent) => {
-  const page = new PageElement({
+  const game = new PageElement({
     classes: ['gameboard'],
     parent: parent,
   });
 
   const menu = new PageElement({
     classes: ['menu'],
-    parent: page,
+    parent: game,
   });
 
   const menuBtns = new PageElement({
@@ -18,21 +18,21 @@ export const createGameBoard = (parent) => {
 
   const display = new PageElement({
     classes: ['display', 'inactive-display'],
-    parent: page,
+    parent: game,
   });
 
   const keyboard = new PageElement({
     classes: ['keyboard'],
-    parent: page,
+    parent: game,
   });
 
   const start = new PageElement({
     classes: ['start'],
-    parent: page,
+    parent: game,
   });
 
   return {
-    page,
+    game,
     menu,
     menuBtns,
     display,
