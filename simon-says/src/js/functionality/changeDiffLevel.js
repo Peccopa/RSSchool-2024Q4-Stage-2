@@ -1,7 +1,7 @@
-export const changeDiffLevel = function (element, components) {
+export const changeDiffLevel = function (element, state, components) {
+  state.diffLevel = element.classList[0].split('-')[1];
   const { levelEasy, levelMedium, levelHard } = components.gamelevels;
   const { keyNumPad, keyLettPad } = components.gameKeys;
-  const diffLevel = element.classList[0].split('-')[1];
 
   [levelEasy, levelMedium, levelHard].forEach((e) =>
     e.classList.remove('selected-btn')
@@ -9,8 +9,6 @@ export const changeDiffLevel = function (element, components) {
   element.classList.add('selected-btn');
   [keyNumPad, keyLettPad].forEach((e) => e.classList.remove('inactive-key'));
 
-  if (diffLevel === 'easy') keyLettPad.classList.add('inactive-key');
-  if (diffLevel === 'medium') keyNumPad.classList.add('inactive-key');
-
-  return diffLevel;
+  if (state.diffLevel === 'easy') keyLettPad.classList.add('inactive-key');
+  if (state.diffLevel === 'medium') keyNumPad.classList.add('inactive-key');
 };

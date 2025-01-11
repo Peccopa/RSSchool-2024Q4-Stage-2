@@ -1,5 +1,5 @@
-export const startNewGame = function (components) {
-  const gameStatus = 'ingame';
+export const startNewGame = function (state, components) {
+  state.gameStatus = 'sequence';
   const { display } = components.gameBoard;
   const { levelEasy, levelMedium, levelHard } = components.gamelevels;
   const {
@@ -32,6 +32,4 @@ export const startNewGame = function (components) {
   blockGameKeys(components.gameKeys.numberKeys);
   newButton.classList.add('blocked-btn');
   repeatButton.classList.add('blocked-btn');
-
-  return gameStatus;
 };
