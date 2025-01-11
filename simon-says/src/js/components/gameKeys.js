@@ -45,7 +45,7 @@ export const createGameKeys = (parent) => {
   const numberKeys = getKeys(data.numbers, keyNumPad);
   const letterKeys1 = getKeys(data.letters.slice(0, 10), keyLine1);
   const letterKeys2 = getKeys(data.letters.slice(10, 19), keyLine2);
-  const letterKeys3 = getKeys(data.letters.slice(20), keyLine3);
+  const letterKeys3 = getKeys(data.letters.slice(19), keyLine3);
   const letterKeys = Object.assign({}, letterKeys1, letterKeys2, letterKeys3);
 
   return {

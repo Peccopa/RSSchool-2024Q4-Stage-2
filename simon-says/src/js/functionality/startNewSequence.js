@@ -18,9 +18,7 @@ export const startNewSequence = function (state, components) {
   function createNewSequence(length) {
     const newSequence = Array.from(length);
     return newSequence.map((e) => {
-      const num = getRandomNumber(0, state.dataArray.length - 1);
-      e = num;
-      return e;
+      return e = getRandomNumber(0, state.dataArray.length - 1);
     });
   }
   state.currentSequence = createNewSequence({ length: state.roundLevel * 2 });
@@ -41,7 +39,6 @@ export const playSequence = function (state, components) {
   );
   state.currentSequence.forEach((e) => {
     const key = state.dataArray[e];
-
     showSequence += key;
     setTimeout(() => {
       allKeys[`key${key}`].classList.add('lighted-key');
