@@ -16,8 +16,6 @@ export const listenGameButtons = function (e) {
   }
   if (e.target === components.startButton) {
     startNewGame(state, components);
-    setTimeout(() => {
-      startNewSequence(state, components);
-    }, 1000);
+    startNewSequence(state, components);
   }
 };

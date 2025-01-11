@@ -1,7 +1,9 @@
 export const changeDiffLevel = function (element, state, components) {
   state.diffLevel = element.classList[0].split('-')[1];
-  const { levelEasy, levelMedium, levelHard } = components.gamelevels;
-  const { keyNumPad, keyLettPad } = components.gameKeys;
+  const {
+    gamelevels: { levelEasy, levelMedium, levelHard },
+    gameKeys: { keyNumPad, keyLettPad },
+  } = components;
 
   [levelEasy, levelMedium, levelHard].forEach((e) =>
     e.classList.remove('selected-btn')

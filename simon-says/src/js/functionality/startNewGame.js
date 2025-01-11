@@ -1,13 +1,14 @@
 export const startNewGame = function (state, components) {
   state.gameStatus = 'sequence';
-  const { display } = components.gameBoard;
-  const { levelEasy, levelMedium, levelHard } = components.gamelevels;
+  state.currentSequence = [];
   const {
     textDisplay,
     newButton,
     startButton,
     repeatButton,
+    gameBoard: { display },
     gameRounds: { gameRounds },
+    gamelevels: { levelEasy, levelMedium, levelHard },
   } = components;
 
   [levelEasy, levelMedium, levelHard].forEach((e) => {
@@ -18,11 +19,10 @@ export const startNewGame = function (state, components) {
       ? e.classList.remove('inactive-btn')
       : e.classList.remove('inactive-rounds');
   });
-
   display.classList.remove('inactive-display');
   textDisplay.textContent = 'Try to remember';
   startButton.classList.add('inactive-btn');
-  // block keys and buttons
+
   function blockGameKeys(object) {
     for (const key in object) {
       object[key].classList.add('blocked-key');

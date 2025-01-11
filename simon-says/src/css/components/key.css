@@ -12,6 +12,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+.lighted-key {
+  background-color: tomato
+}
+
 .inactive-key {
   pointer-events: none;
   opacity: 0.25;
