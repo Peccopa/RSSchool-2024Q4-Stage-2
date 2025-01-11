@@ -8,7 +8,7 @@ export const createGameKeys = (parent) => {
       const element = new PageElement({
         tag: 'button',
         text: `${value}`,
-        classes: ['key', keyName],
+        classes: ['key', keyName, 'blocked-key'],
         attribute: ['type', 'button'],
         parent: parent,
       });
