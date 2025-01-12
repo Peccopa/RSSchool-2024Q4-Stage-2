@@ -1,0 +1,11 @@
+@import url('./normalize.css');
+@import url('./components/body.css');
+@import url('./components/gameboard.css');
+@import url('./components/menu.css');
+@import url('./components/button.css');
+@import url('./components/game-rounds.css');
+@import url('./components/display.css');
+@import url('./components/keyboard.css');
+@import url('./components/key-pads.css');
+@import url('./components/key.css');
+@import url('./components/start.css');
