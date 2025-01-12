@@ -9,4 +9,6 @@ export const state = {
   roundLevel: '1',
   dataArray: [],
   diffLevel: 'easy',
+  gameStack: [],
+  attemptСounter: 0,
 };

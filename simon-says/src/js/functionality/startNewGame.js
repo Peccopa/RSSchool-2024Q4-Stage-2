@@ -21,28 +21,21 @@ export const startNewGame = function (state, components) {
   });
   display.classList.remove('inactive-display');
   startButton.classList.add('inactive-btn');
+  components.startButton.classList.remove('blinked-btn');
 };
 
-export const blockGameKeysAndButtons = function (state, components) {
-  function blockGameKeys(object) {
-    for (const key in object) {
-      object[key].classList.add('blocked-key');
-    }
+export const toggleBlockButton = function (button) {
+  button.classList.toggle('blocked-btn');
+}
+
+export const addBlockKeys = function (object) {
+  for (const key in object) {
+    object[key].classList.add('blocked-key');
   }
-  blockGameKeys(components.gameKeys.letterKeys);
-  blockGameKeys(components.gameKeys.numberKeys);
-  components.newButton.classList.add('blocked-btn');
-  components.repeatButton.classList.add('blocked-btn');
 };
 
-export const unblockGameKeysAndButtons = function (state, components) {
-  function unblockGameKeys(object) {
-    for (const key in object) {
-      object[key].classList.remove('blocked-key');
-    }
+export const removeBlockKeys = function (object) {
+  for (const key in object) {
+    object[key].classList.remove('blocked-key');
   }
-  unblockGameKeys(components.gameKeys.letterKeys);
-  unblockGameKeys(components.gameKeys.numberKeys);
-  components.newButton.classList.remove('blocked-btn');
-  components.repeatButton.classList.remove('blocked-btn');
 };

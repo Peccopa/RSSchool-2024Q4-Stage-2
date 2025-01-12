@@ -1,8 +1,9 @@
 import { data } from '../data/data.js';
 import { awaitPlayerActions } from './awaitPlayerActions.js';
 import {
-  blockGameKeysAndButtons,
-  unblockGameKeysAndButtons,
+  addBlockKeys,
+  removeBlockKeys,
+  toggleBlockButton,
 } from './startNewGame.js';
 
 export const startNewSequence = function (state, components) {
@@ -18,7 +19,7 @@ export const startNewSequence = function (state, components) {
   function createNewSequence(length) {
     const newSequence = Array.from(length);
     return newSequence.map((e) => {
-      return e = getRandomNumber(0, state.dataArray.length - 1);
+      return (e = getRandomNumber(0, state.dataArray.length - 1));
     });
   }
   state.currentSequence = createNewSequence({ length: state.roundLevel * 2 });
@@ -27,31 +28,31 @@ export const startNewSequence = function (state, components) {
 };
 
 export const playSequence = function (state, components) {
-  blockGameKeysAndButtons(state, components);
-  components.textDisplay.textContent = 'Try to remember';
-  let showSequence = '';
+  addBlockKeys(components.gameKeys.allKeys);
+  toggleBlockButton(components.newButton);
+  toggleBlockButton(components.repeatButton);
+  state.gameStack = [];
+  components.textDisplay.textContent = 'TRY TO REMEMBER';
   let timer = 1000;
   let count = state.currentSequence.length;
-  const allKeys = Object.assign(
-    {},
-    components.gameKeys.numberKeys,
-    components.gameKeys.letterKeys
-  );
   state.currentSequence.forEach((e) => {
-    const key = state.dataArray[e];
-    showSequence += key;
+    const key = String(state.dataArray[e]);
+    if (state.gameStack.length < state.currentSequence.length)
+      state.gameStack.push(key);
     setTimeout(() => {
-      allKeys[`key${key}`].classList.add('lighted-key');
+      components.gameKeys.allKeys[`key${key}`].classList.add('lighted-key');
     }, timer);
     timer += 1500;
     setTimeout(() => {
-      allKeys[`key${key}`].classList.remove('lighted-key');
+      components.gameKeys.allKeys[`key${key}`].classList.remove('lighted-key');
       count -= 1;
       if (count === 0) {
         setTimeout(() => {
-          unblockGameKeysAndButtons(state, components);
+          removeBlockKeys(components.gameKeys.allKeys);
+          toggleBlockButton(components.newButton);
+          toggleBlockButton(components.repeatButton);
           awaitPlayerActions(state, components);
-          console.log(`Current sequence is "${showSequence}"`);
+          console.log(`Current sequence is "${state.gameStack}"`);
         }, 500);
       }
     }, timer - 500);

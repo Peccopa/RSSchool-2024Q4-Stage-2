@@ -5,7 +5,7 @@
   background-color: whitesmoke;
   border: 1px solid black;
   border-radius: 2px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: rgba(0, 0, 0, 0.25);
   padding: 1rem;
 
@@ -22,3 +22,16 @@
   pointer-events: none;
   opacity: 0.25;
 }
+
+.display-input {
+
+}
+
+.display-complete {
+
+}
+
+.display-fail {
+  
+}
+

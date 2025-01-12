@@ -1,8 +1,9 @@
 import { components } from '../components.js';
 import { state } from '../script.js';
+import { checkPlayerAction } from './awaitPlayerActions.js';
 import { changeDiffLevel } from './changeDiffLevel.js';
 import { selectNewGame } from './selectNewGame.js';
-import { startNewGame } from './startNewGame.js';
+import { addBlockKeys, startNewGame } from './startNewGame.js';
 import { playSequence, startNewSequence } from './startNewSequence.js';
 
 export const listenGameButtons = function (e) {
@@ -20,10 +21,18 @@ export const listenGameButtons = function (e) {
     startNewSequence(state, components);
   }
   if (e.target === components.repeatButton) {
+    state.attemptСounter += 1;
     e.target.classList.add('inactive-btn');
+    components.repeatButton.classList.remove('blinked-btn');
+    addBlockKeys(components.gameKeys.allKeys);
     playSequence(state, components);
   }
   if (e.target === components.newButton) {
     selectNewGame(state, components);
+  }
+  if (e.target.classList.contains('key')) {
+    if (components.textDisplay.textContent === 'TRY TO REPEAT')
+      components.textDisplay.textContent = '';
+    checkPlayerAction(e);
   }
 };

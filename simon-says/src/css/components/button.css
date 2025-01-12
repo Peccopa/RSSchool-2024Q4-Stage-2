@@ -34,6 +34,21 @@
   pointer-events: none;
 }
 
+.blinked-btn {
+  color: antiquewhite;
+  outline: 1px solid antiquewhite;
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.75);
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    color: rgba(250, 235, 215, 0.25);
+    outline: 1px solid rgba(250, 235, 215, 0.25);
+  }
+}
+
 @media (hover: hover) {
   .button:hover {
     transform: translate(-3px, -3px);
