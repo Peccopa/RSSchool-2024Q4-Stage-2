@@ -26,7 +26,7 @@ export const startNewGame = function (state, components) {
 
 export const toggleBlockButton = function (button) {
   button.classList.toggle('blocked-btn');
-}
+};
 
 export const addBlockKeys = function (object) {
   for (const key in object) {

@@ -1,6 +1,6 @@
 import { components } from '../components.js';
 import { state } from '../script.js';
-import { checkPlayerAction } from './awaitPlayerActions.js';
+import { checkPlayerAction, nextRound } from './awaitPlayerActions.js';
 import { changeDiffLevel } from './changeDiffLevel.js';
 import { selectNewGame } from './selectNewGame.js';
 import { addBlockKeys, startNewGame } from './startNewGame.js';
@@ -21,11 +21,15 @@ export const listenGameButtons = function (e) {
     startNewSequence(state, components);
   }
   if (e.target === components.repeatButton) {
-    state.attemptСounter += 1;
-    e.target.classList.add('inactive-btn');
-    components.repeatButton.classList.remove('blinked-btn');
-    addBlockKeys(components.gameKeys.allKeys);
-    playSequence(state, components);
+    if (e.target.textContent === 'Next') {
+      nextRound(state, components);
+    } else {
+      state.attemptСounter += 1;
+      e.target.classList.add('inactive-btn');
+      components.repeatButton.classList.remove('blinked-btn');
+      addBlockKeys(components.gameKeys.allKeys);
+      playSequence(state, components);
+    }
   }
   if (e.target === components.newButton) {
     selectNewGame(state, components);

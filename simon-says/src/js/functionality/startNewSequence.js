@@ -22,6 +22,7 @@ export const startNewSequence = function (state, components) {
       return (e = getRandomNumber(0, state.dataArray.length - 1));
     });
   }
+
   state.currentSequence = createNewSequence({ length: state.roundLevel * 2 });
   playSequence(state, components);
   state.gameStatus = 'await';

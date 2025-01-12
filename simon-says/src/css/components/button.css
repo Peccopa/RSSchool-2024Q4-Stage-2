@@ -39,7 +39,7 @@
   outline: 1px solid antiquewhite;
   transform: translate(-3px, -3px);
   box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.75);
-  animation: blinker 2s linear infinite;
+  animation: blinker 2s ease-out infinite;
 }
 
 @keyframes blinker {

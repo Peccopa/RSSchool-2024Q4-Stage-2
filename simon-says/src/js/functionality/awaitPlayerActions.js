@@ -1,10 +1,15 @@
-import { toggleBlockButton, addBlockKeys, removeBlockKeys } from './startNewGame.js';
+import {
+  toggleBlockButton,
+  addBlockKeys,
+  removeBlockKeys,
+  startNewGame,
+} from './startNewGame.js';
 import { components } from '../components.js';
 import { state } from '../script.js';
+import { startNewSequence } from './startNewSequence.js';
 
 export const awaitPlayerActions = function (state, components) {
   components.textDisplay.textContent = 'TRY TO REPEAT';
-  console.log(state, components);
 };
 
 export const checkPlayerAction = function (element) {
@@ -18,16 +23,30 @@ export const checkPlayerAction = function (element) {
     setTimeout(() => {
       element.target.classList.remove('lighted-key');
       if (state.gameStack.length === 0) {
-        components.textDisplay.textContent = `You did it!`;
+        components.textDisplay.textContent = `EXCELLENT!`;
         toggleBlockButton(components.newButton);
         toggleBlockButton(components.repeatButton);
+        if (state.roundLevel !== 5) {
+          components.repeatButton.classList.add('blinked-btn');
+          components.repeatButton.classList.remove('inactive-btn');
+          components.repeatButton.textContent = 'Next';
+        } else {
+          components.gameRounds.gameRounds.classList.add('inactive-rounds');
+          components.newButton.classList.add('blinked-btn');
+          components.gameBoard.display.classList.add('inactive-display');
+          components.repeatButton.classList.add('inactive-btn');
+          addBlockKeys(components.gameKeys.allKeys);
+          state.gameStatus = 'endgame';
+          setTimeout(() => {
+            components.textDisplay.textContent = `GAME OVER!`;
+          }, 2000);
+        }
       } else {
         toggleBlockButton(components.newButton);
         toggleBlockButton(components.repeatButton);
         removeBlockKeys(components.gameKeys.allKeys);
-        console.log(true);
       }
-    }, 750);
+    }, 500);
   } else {
     if (state.attemptСounter === 0) {
       components.textDisplay.textContent = 'WRONG! TRY AGAIN';
@@ -44,4 +63,18 @@ export const checkPlayerAction = function (element) {
   }
 };
 
-export const checkGameConditions = function (state, components) {};
+export const nextRound = function (state, components) {
+  state.roundLevel += 1;
+  state.currentSequence = [];
+  state.gameStatus = 'menu';
+  state.dataArray = [];
+  state.gameStack = [];
+  state.attemptСounter = 0;
+
+  components.repeatButton.classList.remove('blinked-btn');
+  components.repeatButton.textContent = 'Repeat sequence';
+  components.gameRounds.roundsCount.textContent = state.roundLevel;
+
+  startNewGame(state, components);
+  startNewSequence(state, components);
+};

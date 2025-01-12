@@ -25,6 +25,8 @@ export const selectNewGame = function (state, components) {
   components.gameBoard.display.classList.add('inactive-display');
   components.newButton.classList.add('inactive-btn');
   components.repeatButton.classList.add('inactive-btn');
+  components.repeatButton.classList.remove('blinked-btn');
+  components.repeatButton.textContent = 'Repeat sequence';
   components.startButton.classList.remove('inactive-btn');
   components.gameRounds.gameRounds.classList.add('inactive-rounds');
 };

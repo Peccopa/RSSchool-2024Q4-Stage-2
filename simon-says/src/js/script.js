@@ -6,7 +6,7 @@ components.gameBoard.game.addEventListener('click', listenGameButtons);
 export const state = {
   currentSequence: [],
   gameStatus: 'menu',
-  roundLevel: '1',
+  roundLevel: 1,
   dataArray: [],
   diffLevel: 'easy',
   gameStack: [],
