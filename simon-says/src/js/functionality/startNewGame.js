@@ -1,3 +1,6 @@
+import { keyboardListener } from './keyboardListener.js';
+import { components } from '../components.js';
+
 export const startNewGame = function (state, components) {
   state.gameStatus = 'sequence';
   state.currentSequence = [];
@@ -29,12 +32,14 @@ export const toggleBlockButton = function (button) {
 };
 
 export const addBlockKeys = function (object) {
+  components.gameBoard.game.removeEventListener('keydown', keyboardListener);
   for (const key in object) {
     object[key].classList.add('blocked-key');
   }
 };
 
 export const removeBlockKeys = function (object) {
+  components.gameBoard.game.addEventListener('keydown', keyboardListener);
   for (const key in object) {
     object[key].classList.remove('blocked-key');
   }

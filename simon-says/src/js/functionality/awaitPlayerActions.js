@@ -12,16 +12,21 @@ export const awaitPlayerActions = function (state, components) {
   components.textDisplay.textContent = 'TRY TO REPEAT';
 };
 
-export const checkPlayerAction = function (element) {
-  if (element.target.textContent === state.gameStack[0]) {
-    element.target.classList.add('lighted-key');
-    components.textDisplay.textContent += `${element.target.textContent}`;
+export const checkPlayerAction = function (element, device = 'mouse') {
+  let target;
+  if (device === 'keyboard')
+    target = components.gameKeys.allKeys[`key${element.key.toUpperCase()}`];
+  if (device === 'mouse') target = element.target;
+
+  if (target.textContent === state.gameStack[0]) {
+    target.classList.add('lighted-key');
+    components.textDisplay.textContent += `${target.textContent}`;
     toggleBlockButton(components.newButton);
     toggleBlockButton(components.repeatButton);
     addBlockKeys(components.gameKeys.allKeys);
     state.gameStack.shift();
     setTimeout(() => {
-      element.target.classList.remove('lighted-key');
+      target.classList.remove('lighted-key');
       if (state.gameStack.length === 0) {
         components.textDisplay.textContent = `EXCELLENT!`;
         toggleBlockButton(components.newButton);
