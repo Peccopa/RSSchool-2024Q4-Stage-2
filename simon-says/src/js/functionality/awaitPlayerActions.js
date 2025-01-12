@@ -13,11 +13,12 @@ export const awaitPlayerActions = function (state, components) {
 };
 
 export const checkPlayerAction = function (element, device = 'mouse') {
+  if (components.textDisplay.textContent === 'TRY TO REPEAT')
+    components.textDisplay.textContent = '';
   let target;
   if (device === 'keyboard')
     target = components.gameKeys.allKeys[`key${element.key.toUpperCase()}`];
   if (device === 'mouse') target = element.target;
-
   if (target.textContent === state.gameStack[0]) {
     target.classList.add('lighted-key');
     components.textDisplay.textContent += `${target.textContent}`;
