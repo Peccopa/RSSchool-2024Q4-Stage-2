@@ -35,8 +35,6 @@ export const listenGameButtons = function (e) {
     selectNewGame(state, components);
   }
   if (e.target.classList.contains('key')) {
-    if (components.textDisplay.textContent === 'TRY TO REPEAT')
-      components.textDisplay.textContent = '';
     checkPlayerAction(e);
   }
 };
