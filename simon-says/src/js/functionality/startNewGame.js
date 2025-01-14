@@ -32,14 +32,14 @@ export const toggleBlockButton = function (button) {
 };
 
 export const addBlockKeys = function (object) {
-  components.gameBoard.game.removeEventListener('keydown', keyboardListener);
+  components.gameBoard.game.removeEventListener('keyup', keyboardListener);
   for (const key in object) {
     object[key].classList.add('blocked-key');
   }
 };
 
 export const removeBlockKeys = function (object) {
-  components.gameBoard.game.addEventListener('keydown', keyboardListener);
+  components.gameBoard.game.addEventListener('keyup', keyboardListener);
   for (const key in object) {
     object[key].classList.remove('blocked-key');
   }
