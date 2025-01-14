@@ -5,9 +5,11 @@ import { checkPlayerAction } from './awaitPlayerActions.js';
 export const keyboardKeyUp = function (element) {
   if (state.dataArray.includes(element.key.toUpperCase())) {
     checkPlayerAction(element, 'keyboard');
-    const target =
-      components.gameKeys.allKeys[`key${element.key.toUpperCase()}`];
-    target.classList.remove('lighted-key');
+    setTimeout(() => {
+      const target =
+        components.gameKeys.allKeys[`key${element.key.toUpperCase()}`];
+      target.classList.remove('lighted-key');
+    }, 500);
   }
 };
 
