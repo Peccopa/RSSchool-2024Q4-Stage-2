@@ -1,4 +1,9 @@
-import { keyboardListener } from './keyboardListener.js';
+import {
+  keyboardKeyUp,
+  keyboardKeyDown,
+  mouseKeyDown,
+  mouseKeyUp,
+} from './keyboardListener.js';
 import { components } from '../components.js';
 
 export const startNewGame = function (state, components) {
@@ -32,14 +37,20 @@ export const toggleBlockButton = function (button) {
 };
 
 export const addBlockKeys = function (object) {
-  components.gameBoard.game.removeEventListener('keyup', keyboardListener);
+  components.gameBoard.game.removeEventListener('keydown', keyboardKeyDown);
+  components.gameBoard.game.removeEventListener('keyup', keyboardKeyUp);
+  components.gameBoard.game.removeEventListener('mousedown', mouseKeyDown);
+  components.gameBoard.game.removeEventListener('mouseup', mouseKeyUp);
   for (const key in object) {
     object[key].classList.add('blocked-key');
   }
 };
 
 export const removeBlockKeys = function (object) {
-  components.gameBoard.game.addEventListener('keyup', keyboardListener);
+  components.gameBoard.game.addEventListener('keydown', keyboardKeyDown);
+  components.gameBoard.game.addEventListener('keyup', keyboardKeyUp);
+  components.gameBoard.game.addEventListener('mousedown', mouseKeyDown);
+  components.gameBoard.game.addEventListener('mouseup', mouseKeyUp);
   for (const key in object) {
     object[key].classList.remove('blocked-key');
   }

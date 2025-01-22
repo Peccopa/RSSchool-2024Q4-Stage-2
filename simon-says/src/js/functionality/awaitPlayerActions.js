@@ -20,14 +20,14 @@ export const checkPlayerAction = function (element, device = 'mouse') {
     target = components.gameKeys.allKeys[`key${element.key.toUpperCase()}`];
   if (device === 'mouse') target = element.target;
   if (target.textContent === state.gameStack[0]) {
-    target.classList.add('lighted-key');
+    // target.classList.add('lighted-key');
     components.textDisplay.textContent += `${target.textContent}`;
     toggleBlockButton(components.newButton);
     toggleBlockButton(components.repeatButton);
     addBlockKeys(components.gameKeys.allKeys);
     state.gameStack.shift();
     setTimeout(() => {
-      target.classList.remove('lighted-key');
+      // target.classList.remove('lighted-key');
       if (state.gameStack.length === 0) {
         components.textDisplay.textContent = `EXCELLENT!`;
         toggleBlockButton(components.newButton);
