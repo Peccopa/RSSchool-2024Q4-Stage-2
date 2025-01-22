@@ -1,0 +1,64 @@
+@use './mixins';
+@use './variables';
+
+%section-bg {
+  background-color: variables.$color-primary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+%header-1 {
+  @include mixins.font($size: 3.2rem, $height: 150%, $spacing: 0.18em);
+}
+
+%header-2 {
+  @include mixins.font($height: 150%, $spacing: 0.16em); // pixel
+}
+
+%header-3 {
+  @include mixins.font($size: 1.6rem, $height: 152%, $spacing: 0.08em);
+}
+
+%header-4 {
+  @include mixins.font($size: 1.2rem);
+}
+
+%slider-text {
+  @include mixins.font($size: 8rem, $height: normal, $spacing: normal);
+}
+
+%action-large {
+  @include mixins.font($height: 152%, $spacing: 0.16em);
+}
+
+%action-small {
+  @include mixins.font($size: 1.2rem);
+}
+
+%caption {
+  @include mixins.font(
+    $family: variables.$second-family,
+    $weight: 400,
+    $height: 100%,
+    $transform: none
+  );
+}
+
+%paragraph {
+  @include mixins.font(
+    $size: 1.6rem,
+    $weight: 400,
+    $height: 148%,
+    $spacing: normal,
+    $transform: none
+  );
+}
+
+%transition-slow {
+  transition: all 0.3s ease-in-out;
+}
+
+%transition-fast {
+  transition: all 0.15s ease-out;
+}

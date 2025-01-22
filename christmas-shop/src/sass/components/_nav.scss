@@ -1,0 +1,54 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.nav {
+  @extend %transition-slow;
+  @include mixins.media() {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$color-static-white;
+    &_opened {
+      left: 0%;
+    }
+  }
+  &__list {
+    @include mixins.flex($justify-content: space-between);
+    gap: 8px;
+    @include mixins.media() {
+      justify-content: center;
+      flex-direction: column;
+      height: calc(100dvh + variables.$header-height);
+      // height: calc(100dvh);
+    }
+  }
+  &__link {
+    @extend %transition-slow;
+    @extend %action-small;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    @include mixins.media() {
+      display: block;
+      @include mixins.font($height: 152%, $spacing: 0.16em);
+    }
+    @media (hover: hover) {
+      &:hover {
+        color: variables.$color-primary;
+        background-color: variables.$color-primary-10;
+      }
+    }
+    &_active {
+      color: variables.$color-primary;
+      background-color: variables.$color-primary-10;
+      pointer-events: none;
+      @include mixins.media() {
+        pointer-events: all;
+        cursor: default;
+      }
+    }
+  }
+}

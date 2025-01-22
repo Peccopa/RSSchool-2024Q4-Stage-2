@@ -1,0 +1,48 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.footer {
+  @include mixins.flex();
+  flex-direction: column;
+  padding: 60px 8px;
+  gap: 60px;
+  .contact-cards {
+    @include mixins.flex();
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .contact-links {
+    @include mixins.flex();
+    flex-direction: column;
+    gap: 12px;
+  }
+  .social-ico path {
+    @extend %transition-slow;
+  }
+  .social-links {
+    @include mixins.flex();
+    gap: 12px;
+    &__link {
+      @extend %transition-slow;
+      padding: 8px;
+      @media (hover: hover) {
+        &:hover .social-ico path {
+          stroke: variables.$color-primary;
+        }
+      }
+    }
+  }
+  .copyright {
+    @extend %paragraph;
+  }
+  .rss-link {
+    @extend %caption;
+    @extend %transition-slow;
+    @media (hover: hover) {
+      &:hover {
+        color: variables.$color-primary;
+      }
+    }
+  }
+}

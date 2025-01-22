@@ -1,0 +1,11 @@
+@use '../general/variables';
+
+.purple {
+  color: variables.$color-tag-purple;
+}
+.pink {
+  color: variables.$color-tag-pink;
+}
+.green {
+  color: variables.$color-tag-green;
+}

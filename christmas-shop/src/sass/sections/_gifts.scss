@@ -1,0 +1,33 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.gifts {
+  @extend %transition-fast;
+  background-image: url('../img/bg/bg-garland.png');
+  background-color: variables.$color-primary;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  border-radius: 20px;
+  padding: 60px 5.695%;
+  @include mixins.media($screen-width: variables.$bigmob-width) {
+    padding: 60px 8px;
+  }
+  &__content {
+    @include mixins.flex();
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__h1 {
+    max-width: 426px;
+    text-align: center;
+    @extend %header-1;
+    color: variables.$color-static-white;
+  }
+  &__cards {
+    @include mixins.flex();
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

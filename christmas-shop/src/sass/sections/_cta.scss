@@ -1,0 +1,31 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.cta {
+  @extend %transition-fast;
+  background-image: url('../img/bg/bg-snow.png'), url('../img/bg/bg-forest.png');
+  border-radius: 0 0 20px 20px;
+  @include mixins.flex();
+  padding: 60px 5.695%;
+  @extend %section-bg;
+  min-height: 668px;
+  @include mixins.media() {
+    padding: 60px 8px;
+  }
+  @include mixins.media($screen-width: variables.$bigmob-width) {
+    min-height: 704px;
+  }
+  &__content {
+    @extend %transition-fast;
+    @include mixins.flex();
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__h2 {
+    max-width: 426px;
+    text-align: center;
+    @extend %header-2;
+    color: variables.$color-static-white;
+  }
+}

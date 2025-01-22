@@ -1,0 +1,28 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.hero {
+  @extend %transition-fast;
+  background-image: url('../img/bg/bg-ball.png'), url('../img/bg/bg-snow.png');
+  @extend %section-bg;
+  border-radius: 20px 20px 0 0;
+  padding: 60px 0;
+  &__content {
+    @extend %transition-fast;
+    @include mixins.flex();
+    color: variables.$color-static-white;
+    flex-direction: column;
+    padding: 60px 0;
+    margin: auto;
+    gap: 12px;
+    max-width: 429px;
+  }
+  &__caption {
+    @extend %caption;
+  }
+  &__h1 {
+    @extend %header-1;
+    text-align: center;
+  }
+}

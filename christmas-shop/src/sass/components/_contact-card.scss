@@ -1,0 +1,33 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.contact-card {
+  @extend %transition-slow;
+  background-color: variables.$color-content-background;
+  @include mixins.flex();
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 417.33px;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 12px;
+  @include mixins.media($screen-width: variables.$bigmob-width) {
+    min-width: auto;
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+  }
+  &__action {
+    @extend %action-large;
+  }
+  &__h3 {
+    @extend %header-3;
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: variables.$color-primary;
+    }
+  }
+}

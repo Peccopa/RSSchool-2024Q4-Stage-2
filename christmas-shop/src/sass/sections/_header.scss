@@ -1,0 +1,12 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.header {
+  height: variables.$header-height;
+  @include mixins.flex($justify-content: space-between);
+  padding: 12px 82px;
+  @include mixins.media() {
+    padding: 12px 8px;
+  }
+}

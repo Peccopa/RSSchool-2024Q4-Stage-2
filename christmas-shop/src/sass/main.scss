@@ -1,0 +1,31 @@
+@use './general/fonts';
+@use './general/variables';
+@use './general/mixins';
+@use './general/placeholders';
+@use './general/normalize';
+
+@use './components/page';
+@use './components/body';
+@use './components/logo';
+@use './components/overlay';
+@use './components/nav';
+@use './components/burger';
+@use './components/loader';
+@use './components/page-up';
+@use './components/buttons';
+@use './components/gift-card';
+@use './components/colors';
+@use './components/timer';
+@use './components/contact-card';
+@use './components/tabs';
+
+@use './sections/header';
+@use './sections/hero';
+@use './sections/about';
+@use './sections/slider';
+@use './sections/best';
+@use './sections/cta';
+@use './sections/footer';
+@use './sections/gifts';
+
+

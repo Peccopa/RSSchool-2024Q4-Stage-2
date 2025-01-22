@@ -1,0 +1,17 @@
+@use '../general/placeholders';
+@use '../general/variables';
+
+.page {
+  @extend %transition-slow;
+  position: relative;
+  overflow: hidden;
+  max-width: 1440px;
+  margin: auto;
+  opacity: 0;
+}
+
+.main {
+  @extend %transition-slow;
+  border-radius: 20px;
+  background-color: variables.$color-primary;
+}

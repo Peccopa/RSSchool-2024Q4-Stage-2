@@ -1,0 +1,44 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.timer {
+  @include mixins.flex();
+  flex-direction: column;
+  color: variables.$color-static-white;
+  min-height: 104px;
+  gap: 8px;
+  &__caption {
+    @include mixins.flex();
+    @extend %caption;
+  }
+  &__block {
+    @include mixins.flex();
+    border-radius: 20px;
+    background-color: variables.$color-static-white-40;
+    padding: 8px 12px 12px;
+  }
+  &__h2 {
+    width: 100%;
+    @extend %header-2;
+    text-align: center;
+  }
+  &__h4 {
+    @extend %header-4;
+    text-align: center;
+  }
+  &__cell {
+    @include mixins.flex();
+    position: relative;
+    flex-direction: column;
+    width: 80px;
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 1px;
+      height: 20px;
+      background-color: variables.$color-static-white-40;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use './variables';
+
+@mixin flex($display: flex, $align-items: center, $justify-content: center) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin font(
+  $family: variables.$first-family,
+  $size: 2.4rem,
+  $weight: 600,
+  $height: 130%,
+  $spacing: 0.05em,
+  $transform: uppercase
+) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-transform: $transform;
+}
+
+@mixin media($screen-width: variables.$tablet-width) {
+  @media (max-width: $screen-width) {
+    @content;
+  }
+}

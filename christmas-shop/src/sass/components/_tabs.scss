@@ -1,0 +1,33 @@
+@use '../general/variables';
+@use '../general/placeholders';
+@use '../general/mixins';
+
+.tabs {
+  @include mixins.flex($justify-content: space-between);
+  gap: 8px;
+  @include mixins.media($screen-width: variables.$bigmob-width) {
+    gap: 0px;
+  }
+  .tab {
+    @extend %transition-slow;
+    @extend %action-small;
+    color: variables.$color-static-white;
+    border-radius: 12px;
+    padding: 12px 20px;
+    max-height: 40px;
+    cursor: pointer;
+    @include mixins.media($screen-width: variables.$bigmob-width) {
+      padding: 12px 8px;
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: variables.$color-static-white-20;
+      }
+    }
+  }
+  .tab_selected {
+    background-color: variables.$color-static-white-20;
+    pointer-events: none;
+    cursor: auto;
+  }
+}
