@@ -16,7 +16,7 @@ export const tabs = {
   getTabCategoryArray(e) {
     const category = e.target.innerText.replace('FOR ', '').toLowerCase();
     return tabs.data.filter(
-      (e) => e.category.replace('For ', '').toLowerCase() === category
+      (e) => e.category.replace('For ', '').toLowerCase() === category,
     );
   },
 

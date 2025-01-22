@@ -5,7 +5,8 @@ export const slider = {
   sliderBtnLeft: document.querySelector('.slider-button.left'),
   sliderBtnRght: document.querySelector('.slider-button.right'),
   sliderAnimationEnd() {
-    slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
+    // slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
+    slider.sliderBtns.addEventListener('click', slider.sliderClick);
   },
   sliderResize() {
     slider.sliderClip.style.left = `0px`;
@@ -29,7 +30,7 @@ export const slider = {
           slider.sliderBtns.removeEventListener('click', slider.sliderClick);
           slider.sliderClip.addEventListener(
             'transitionend',
-            slider.sliderAnimationEnd
+            slider.sliderAnimationEnd,
           );
         }
         if (clipPosition - clipStep === -clipStep * clickCount) {
@@ -43,7 +44,7 @@ export const slider = {
           slider.sliderBtns.removeEventListener('click', slider.sliderClick);
           slider.sliderClip.addEventListener(
             'transitionend',
-            slider.sliderAnimationEnd
+            slider.sliderAnimationEnd,
           );
         }
         if (slider.sliderClip.style.left === '0px') {
@@ -73,11 +74,11 @@ export const slider = {
           slider.sliderBtnLeft.classList.remove('slider-button_inactive');
           slider.sliderBtns.removeEventListener(
             'click',
-            slider.sliderClickTrash
+            slider.sliderClickTrash,
           );
           slider.sliderClip.addEventListener(
             'transitionend',
-            slider.sliderAnimationEnd
+            slider.sliderAnimationEnd,
           );
         }
       }
@@ -90,11 +91,11 @@ export const slider = {
           slider.sliderBtnRght.classList.remove('slider-button_inactive');
           slider.sliderBtns.removeEventListener(
             'click',
-            slider.sliderClickTrash
+            slider.sliderClickTrash,
           );
           slider.sliderClip.addEventListener(
             'transitionend',
-            slider.sliderAnimationEnd
+            slider.sliderAnimationEnd,
           );
         }
       }

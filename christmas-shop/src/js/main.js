@@ -10,7 +10,7 @@ import { pageup } from './pageup.js';
 import { tabs } from './tabs.js';
 import { Cards } from './cards.js';
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
   const url = window.location.pathname.includes('gifts')
     ? '../data/gifts.json'
     : './src/data/gifts.json';
@@ -44,8 +44,8 @@ const loadPage = function (data) {
     }
 
     window.addEventListener('resize', slider.sliderResize);
-    // slider.sliderBtns.addEventListener('click', slider.sliderClick);
-    slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
+    slider.sliderBtns.addEventListener('click', slider.sliderClick);
+    // slider.sliderBtns.addEventListener('click', slider.sliderClickTrash);
     timer.startTimer();
   }
 };
